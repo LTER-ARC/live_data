@@ -47,3 +47,13 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Ignore unneeded Quarto folders
+/.quarto/
+
+# R Project
+*.Rproj
+
+# Mac files
+.DS_Store
+docs/

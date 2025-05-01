@@ -1,0 +1,31 @@
+project:
+  type: website
+  execute-dir: project
+  output-dir: docs
+  render:
+    - "*.qmd"
+
+execute: 
+  freeze: auto
+
+website:
+  title: "Arctic LTER Live Data"
+  repo-url: https://github.com/ARC-LTER/live_data
+  repo-actions: [issue]
+  navbar:
+    background: primary
+    left:
+      - text: "Home"
+        href: index.qmd
+    right: 
+      - icon: github
+        href: https://github.com/ARC-LTER/live_data
+  page-footer: 
+    center: "Copyright 2025, Arctic LTER"
+    background: secondary
+
+format:
+  html:
+    toc: true
+    link-external-newwindow: true
+    link-external-icon: false
