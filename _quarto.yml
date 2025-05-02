@@ -17,11 +17,12 @@ website:
     left:
       - text: "Home"
         href: index.qmd
+      - mat06_loggers.qmd
     right: 
       - icon: github
         href: https://github.com/ARC-LTER/live_data
   page-footer: 
-    center: "Copyright 2025, Arctic LTER"
+    center: "Arctic LTER"
     background: secondary
 
 format:

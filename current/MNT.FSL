@@ -1,0 +1,72 @@
+Final Storage Label File for:  2014NACID_10AUG14_.csi
+Date:  8/12/2014
+Time:  13:52:02
+
+109 Output_Table  60.00 Min
+1 109 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 CT_3M_Air_AVG  L
+6 GH_Air_AVG  L
+7 CT_3M_RH_AVG  L
+8 GH_RH_AVG  L
+
+112 Output_Table 1440.00 Min
+1 112 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 CT_3M_Air_MAX  L
+5 CT_3M_Air_Hr_Min_MAX  L
+6 GH_Air_MAX  L
+7 GH_Air_Hr_Min_MAX  L
+8 CT_3M_Air_MIN  L
+9 CT_3M_Air_Hr_Min_MIN  L
+10 GH_Air_MIN  L
+11 GH_Air_Hr_Min_MIN  L
+12 ProgSig  L
+
+210 Output_Table 180.00 Min
+1 210 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 NP1Sur_AVG  L
+6 NP1_10cm_AVG  L
+7 NP1_20cm_AVG  L
+8 NP1_40cm_AVG  L
+9 NP2sur_AVG  L
+10 NP2_10cm_AVG  L
+11 NP2_20cm_AVG  L
+12 NP2_40cm_AVG  L
+13 CT1sur_AVG  L
+14 CT1_10cm_AVG  L
+15 CT1_20cm_AVG  L
+16 CT1_40cm_AVG  L
+17 CT2sur_AVG  L
+18 CT2_10cm_AVG  L
+19 CT2_20cm_AVG  L
+20 CT2_40cm_AVG  L
+21 GH1sur_AVG  L
+22 GH1_10cm_AVG  L
+23 GH1_20cm_AVG  L
+24 GH1_40cm_AVG  L
+25 GH2sur_AVG  L
+26 GH2_10cm_AVG  L
+27 GH2_20cm_AVG  L
+28 GH2_40cm_AVG  L
+29 GHF1sur_AVG  L
+30 GHF1_10cm_AVG  L
+31 GHF1_20cm_AVG  L
+32 GHF1_40cm_AVG  L
+33 GHF2sur_AVG  L
+34 GHF2_10cm_AVG  L
+35 GHF2_20cm_AVG  L
+36 GHF2_40cm_AVG  L
+37 Battery_AVG  L
+38 V_Vx_AVG  L
+39 REF_TEMP_AVG  L
+40 Ref_107_AVG  L
+
+
+Estimated Total Final Storage Locations used per day 524

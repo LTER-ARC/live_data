@@ -1,0 +1,13 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+## 
+
+# Arctic LTER Weather Stations
+
+### Current Weather Data from LTER Weather Stations
+
+**Note:** [**These data are provisional and not error checked!**]{.underline} Weather station time is set to Alaska standard time and is not adjusted for daylight saving time. Data are hourly or half-hourly averages.
