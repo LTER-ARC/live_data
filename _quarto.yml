@@ -6,7 +6,7 @@ project:
     - "*.qmd"
 
 execute: 
-  freeze: false
+  freeze: auto
 
 website:
   title: "Arctic LTER Live Data"
