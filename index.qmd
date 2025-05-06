@@ -1,12 +1,8 @@
 ---
-title: "Untitled"
+title: " Arctic LTER Weather Stations"
 format: html
 editor: visual
 ---
-
-## 
-
-# Arctic LTER Weather Stations
 
 ### Current Weather Data from LTER Weather Stations
 
