@@ -28,6 +28,7 @@ jobs:
             any::tidyverse
             any::plotly
             any::ggtext
+            any::janitor
         
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2

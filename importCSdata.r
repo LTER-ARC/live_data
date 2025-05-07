@@ -12,7 +12,7 @@ importCSdata <- function(filename,retopt="data"){
   #************************************************************************************************
   library(tidyverse)
   library(janitor)
-  library(rstudioapi)
+  #library(rstudioapi)
   
   time_zone <- "Etc/GMT+9" #Alaska standard time
      # site name from the file name without the file extension and path
@@ -37,7 +37,7 @@ importCSdata <- function(filename,retopt="data"){
       		    # Read the .fsl file to get the headers. The .fsl file should be in the same directory
       		    # with the same name as the data file but with .fsl extension.
       		  h_filename <- sub("\\.dat$","\\.fsl",filename)
-      		  if (!file.exists(h_filename)) {h_filename <- rstudioapi::selectFile(caption = "Select .fsl file")}
+      		 # if (!file.exists(h_filename)) {h_filename <- rstudioapi::selectFile(caption = "Select .fsl file")}
       		  header <- read.table(file=h_filename,skip=4, header = FALSE, stringsAsFactors=FALSE, 
       		                       fill = TRUE,col.names = c("var_no","var_names","var_L","extra"))
           		  # Column names will have "L" in the "var_L" column. Variable "var_no" is a sequence of numbers 
@@ -65,7 +65,7 @@ importCSdata <- function(filename,retopt="data"){
       		     # from header matching "ID_xx" dataframe
       		  for (nm in names(stn.data)) {
       		    stn.data[nm][[1]]<- stn.data[nm][[1]][1:nrow(header[[nm]])]
-      		    names(stn.data[nm][[1]])<-make_clean_names(header[[nm]][["var_names"]] )
+      		    names(stn.data[nm][[1]])<-janitor::make_clean_names(header[[nm]][["var_names"]] )
       		    hourexist <-("hour_minute_rtm" %in% names(stn.data[nm][[1]])) #Check if a daily array with no hour_minute
       		    stn.data[nm][[1]]<- stn.data[nm][[1]] %>%
       		      mutate(timestamp = 
