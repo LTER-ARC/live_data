@@ -8,10 +8,11 @@ format: dashboard
 #| echo: false
 #| output: false
 # REQUIRED PACKAGES ------------------------------------------------------
-packages <- c("ggplot2","ggtext","htmlwidgets","janitor","lubridate",
-              "plotly","readxl","stringr","tidyverse")
+# packages <- c("ggplot2","ggtext","htmlwidgets","janitor","lubridate",
+#               "plotly","readxl","stringr","tidyverse")
 
-
+packages <- c("ggplot2","ggtext",
+              "plotly","tidyverse")
 # Packages loading
 invisible(lapply(packages, library, character.only = TRUE))
 
