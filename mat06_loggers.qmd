@@ -125,8 +125,8 @@ logger_data<- logger_file %>% map(function(x) importCSdata(x))
     scale_color_manual(values = c(
       'control' = 'blue',
       'greenhouse' = 'red')) +
-    labs(title = "MAT2006-blk1 Met Data",
-         subtitle = "Control, Greenhouse",
+    labs(#title = "MAT2006-blk1 Met Data",
+         #subtitle = "Control, Greenhouse",
          x = "Date",
          y = "Degrees Celsius",
          color = '') +
@@ -150,7 +150,7 @@ logger_data<- logger_file %>% map(function(x) importCSdata(x))
     scale_color_manual(values = c(
       "control RH" = "blue",
       "greenhouse RH" = "red")) +
-    labs(title = "MAT2006-Blk1 Air Temperature/RH",
+    labs(#title = "MAT2006-Blk1 Air Temperature/RH",
          x = "Date",
          y = "Relative Humidity (%)",
          color = '')+
@@ -165,7 +165,7 @@ p3_p <- ggplotly(
     ggplot(met_data) +
     geom_line(aes(x=timestamp, y=battv_min, color = "Battery min")) +
     scale_x_datetime()+
-    labs(title ="TMAT2006-Blk1 Battery",
+    labs(#title ="TMAT2006-Blk1 Battery",
          x = "Date",
          y = "volts",
          color = '')+
@@ -180,8 +180,8 @@ p3_p <- ggplotly(
     partial_bundle()
 
 #Put the plots together on a panel 
- subplot(p2_p,p1_p,p3_p, nrows=3, shareX = TRUE,titleY = T,heights = c(.3,.4,.3)) %>% 
-    layout(title = 'MAT06 Block 1 Air Temperature/RH and Battery',margin = 0.01)
+ subplot(p2_p,p1_p,p3_p, nrows=3, shareX = TRUE,titleY = T,heights = c(.3,.4,.3))# %>% 
+    #layout(title = 'MAT06 Block 1 Air Temperature/RH and Battery',margin = 0.01)
 
 ```
 
@@ -239,15 +239,15 @@ sp3 <- soil_GH_data %>% select(timestamp,intersect(contains("gh"), contains("avg
     partial_bundle()
   
   #Put the plots together on a panel
-  subplot(sp3_p,sp4_p, nrows=2, shareX = TRUE,titleY = T) %>% 
-    layout(title = 'MAT206-Blk1 Greenhouse Plot Soil Temperature and Moisture',margin = 0.01)
+  subplot(sp3_p,sp4_p, nrows=2, shareX = TRUE,titleY = T) #%>% 
+    #layout(title = 'MAT206-Blk1 Greenhouse Plot Soil Temperature and Moisture',margin = 0.01)
 
 ```
 
 ```{r}
-#| label: CT, GH and F10 Plots
+#| label: CT and F10 Plots
 #| echo: false
-#| title: "Soil temperature/moisture"
+#| title: "Soil temperature"
 
  #Soil ggplot Plots in CT, GH and F10 plots -----
   
@@ -298,8 +298,8 @@ sp3 <- soil_GH_data %>% select(timestamp,intersect(contains("gh"), contains("avg
     partial_bundle()
   
   
-subplot(sp1_p,sp2_p, nrows=2, shareX = TRUE,titleY = T)%>% 
-    layout(title = 'MAT06 Block 1 Soil Temperature',margin = 0.01)
+subplot(sp1_p,sp2_p, nrows=2, shareX = TRUE,titleY = T)#%>% 
+    #layout(title = 'MAT06 Block 1 Soil Temperature',margin = 0.01)
 
 ```
 
@@ -396,10 +396,10 @@ subplot(
   nrows = 3,
   shareX = TRUE,
   titleY = T,
-  heights = c(.3, .4, .3),
+  heights = c(.3, .5, .2),
   which_layout = 2
-) %>%
-  layout(title = 'MAT06 Block 2 Greenhouse Temperature/RH and Battery', margin = 0.01)
+) #%>%
+  #layout(title = 'MAT06 Block 2 Greenhouse Temperature/RH and Battery', margin = 0.01)
 
 ```
 
@@ -444,8 +444,8 @@ subplot(
     scale_color_manual(values = c(
       'control' = 'blue',
       'greenhouse' = 'red')) +
-    labs(title = "MAT2006-blk3 Met Data",
-         subtitle = "Control, Greenhouse",
+    labs(#title = "MAT2006-blk3 Met Data",
+         #subtitle = "Control, Greenhouse",
          x = "Date",
          y = "Degrees Celsius",
          color = '') +
@@ -470,7 +470,7 @@ subplot(
   p3 <- ggplot(met_data) +
     geom_line(aes(x=timestamp, y=battv_avg, color = "Battery avg")) +
     scale_x_datetime()+
-    labs(title ="MAT2006-Blk3",
+    labs(#title ="MAT2006-Blk3",
          x = "Date",
          y = "volts",
          color = '')+
@@ -519,8 +519,8 @@ subplot(
   
   #Put the plots together on a panel
 subplot(p2_p,p1_p,p4_p, nrows=3, shareX = TRUE,titleY = T,
-               heights = c(.2,.6,.2), which_layout = 2) %>% 
-    layout(title = 'MAT2006-Blk3 CT_GH Air/RH Temperatures',margin = 0.01)
+               heights = c(.2,.6,.2), which_layout = 2) #%>% 
+    #layout(title = 'MAT2006-Blk3 CT_GH Air/RH Temperatures',margin = 0.01)
 
 ```
 
@@ -613,8 +613,8 @@ subplot(p2_p,p1_p,p4_p, nrows=3, shareX = TRUE,titleY = T,
     partial_bundle()
   
   #Put the plots together on a panel
- subplot(sp3_p,sp1_p,sp2_p, nrows=3, shareX = TRUE,titleY = T) %>% 
-    layout(title = 'Soil Temperature',margin = 0.01)
+ subplot(sp3_p,sp1_p,sp2_p, nrows=3, shareX = TRUE,titleY = T) #%>% 
+   # layout(title = 'Soil Temperature',margin = 0.01)
 
 
 ```
