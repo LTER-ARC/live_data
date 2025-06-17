@@ -12,4 +12,4 @@ editor: visual
 
 [Current Toolik Field Station Weather(link is external)](https://www.uaf.edu/toolik/edc/monitoring/abiotic/weather-anychart.php)
 
-[![Looking north from Toolik Field Station](https://lat68.toolik.alaska.edu/ajax/edc/resize_webcam_image.php?webcam=1){alt="Looking north from Toolik Field Station" width="126"}](https://toolik.alaska.edu/edc/index.php) [Current Toolik Webcam(link is external)](https://www.uaf.edu/toolik/edc/index.php)
+[![Looking north from Toolik Field Station](https://lat68.toolik.alaska.edu/ajax/edc/resize_webcam_image.php?webcam=1){alt="Looking north from Toolik Field Station" width="1026"}](https://toolik.alaska.edu/edc/index.php) [Current Toolik Webcam(link is external)](https://www.uaf.edu/toolik/edc/index.php)
