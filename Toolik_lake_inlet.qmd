@@ -21,9 +21,9 @@ format: dashboard
 #| echo: false
 #| title: "Met Data"
 
-p <- readRDS("toolik_lake_station.rds")
-
-p
+# p <- readRDS("toolik_lake_station.rds")
+# 
+# p
 
 ```
 
@@ -32,8 +32,8 @@ p
 #| echo: false
 #| title: "Tchain Data"
 
-tchain<- readRDS("toolik_lake_station_Tchain.rds")
-tchain
+#tchain<- readRDS("toolik_lake_station_Tchain.rds")
+#tchain
 
 ```
 
