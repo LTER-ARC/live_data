@@ -35,9 +35,10 @@ logger_file <-  c(blk1_1,blk1_2,blk1_3,blk2_1,blk3_1,blk3_2)
 
 logger_data<- logger_file %>% map(function(x) importCSdata(x))
 
+
 ```
 
-# Block1
+# Block 1
 
 ```{r}
 #| label: setup_dataframes
@@ -487,32 +488,6 @@ subplot(
   # set the min and max for the initial x axis display in ggplotly
   min_date <-max_date - lubridate::days(5)
   
-  
-  # # Define xaxis options for using a range slider
-  # xax<- list( 
-  #   autorange=F,
-  #   range= list(min_date, max_date),
-  #   rangeselector = list(
-  #     buttons = list(
-  #       list(count = 1, label = "1 week", strp ="week", stepmode = "backward"),
-  #       list(count = 3, label = "3 mo", step = "month", stepmode = "backward"),
-  #       list(count = 6, label = "6 mo", step = "month", stepmode = "backward"),
-  #       #list(count = 1, label = "YTD", step = "year", stepmode = "todate"),
-  #       list(step = "all")
-  #     )),
-  #   rangeslider = list(type = "date", thickness=0.05))
-  # # Create a list of arguments for the annotation layout to add titles to the subplots
-  # anno_agr <-list(x = .5,
-  #                 text = "",
-  #                 y = 1,
-  #                 yref = "paper",
-  #                 xref = "paper",
-  #                 xanchor = "center",
-  #                 yanchor = "top",
-  #                 yshift = 20,
-  #                 showarrow = FALSE,
-  #                 font = list(size = 15))
-  # 
   # Air Temperature panel ----
   # First convert ggplot plots to ggplotly
   #Title plot 1
