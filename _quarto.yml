@@ -5,8 +5,6 @@ project:
   render:
     - "*.qmd"
 
-execute: 
-  freeze: auto
 
 website:
   title: "Arctic LTER Live Data"
@@ -18,6 +16,7 @@ website:
       - text: "Home"
         href: index.qmd
       - mat06_loggers.qmd
+      - Toolik_lake_inlet.qmd
     right: 
       - icon: github
         href: https://github.com/ARC-LTER/live_data
