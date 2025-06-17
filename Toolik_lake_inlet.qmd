@@ -1,0 +1,50 @@
+---
+title: "Toolik Lake & Inlet Stations"
+editor: visual
+format: dashboard
+---
+
+```{r}
+#| echo: false
+#| output: false
+
+# just getting the ploty object
+
+```
+
+# Lake Station
+
+## Row {.tabset}
+
+```{r}
+#| label: get plot for lake station
+#| echo: false
+#| title: "Met Data"
+
+p <- readRDS("toolik_lake_station.rds")
+
+p
+
+```
+
+```{r}
+#| label: get Tchain plot for lake station
+#| echo: false
+#| title: "Tchain Data"
+
+tchain<- readRDS("toolik_lake_station_Tchain.rds")
+tchain
+
+```
+
+# Inlet Station
+
+```{r}
+#| label: get plot for inlet station
+#| echo: false
+#| title: "Inlet Data"
+
+inlet<- readRDS("toolik_inlet_station.rds")
+inlet
+
+```
