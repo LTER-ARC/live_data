@@ -1,1 +1,1 @@
-Sitemap: https://ARC-LTER.github.io/live_data/sitemap.xml
+Sitemap: https://LTER-ARC.github.io/live_data/sitemap.xml
