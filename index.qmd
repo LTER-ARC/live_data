@@ -4,18 +4,18 @@ format: html
 editor: visual
 ---
 
-### Current Weather Data from LTER Weather Stations
+Recent data from the Arctic Long Term Experimental Research (LTER-ARC) experimental and monitoring stations.
 
 **Note:** [**These data are provisional and have not been error-checked.**]{.underline} The weather station's time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are hourly or half-hourly averages.
 
-------------------------------------------------------------------------
+-   [Moist acidic tundra 2006 (MAT06) blocks 1, 2, and 3](/mat06_loggers.html).
 
-::: {#TFS_data}
-### For current Toolik Field Station data, follow the links below.
+-   [Toolik Lake Float](/Toolik_lake_inlet.html)
 
-[Current Toolik Field Station Weather(link is external)](https://www.uaf.edu/toolik/edc/monitoring/abiotic/weather-anychart.php)
+-   [Toolik Lake Inlet](/Toolik_lake_inlet.html)
 
-## [![Toolik Webcam](https://lat68.toolik.alaska.edu/ajax/edc/resize_webcam_image.php?webcam=1&size=640x480){width="648"}](https://www.uaf.edu/toolik/edc/index.php)
+::: column-margin
+Visit the [Toolik Field Station Environmental Data Center](https://www.uaf.edu/toolik/edc/monitoring/abiotic/weather-anychart.php "TFS Environmental Data Center") for monitoring data collected by the station.
 
-[Toolik Field Station Webcams](https://www.uaf.edu/toolik/edc/index.php "Toolik Field Station EDC")
+![Toolik Webcam](https://lat68.toolik.alaska.edu/ajax/edc/resize_webcam_image.php?webcam=1&size=640x480){width="648"}
 :::
