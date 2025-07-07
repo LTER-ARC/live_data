@@ -38,7 +38,16 @@ logger_data<- logger_file %>% map(function(x) importCSdata(x))
 
 ```
 
+# Documentation
+
+::: {.card }
+Campbell Scientific data logger are setup in blocks 1 and 3 to monitor the greenhouse and control air temperature/RH, soil temperatures and soil moisture. Block 2 only monitors greenhouse air temperature/RH.
+
+:::
+
 # Block 1
+
+## Row {.tabset}
 
 ```{r}
 #| label: setup_dataframes
@@ -105,7 +114,6 @@ logger_data<- logger_file %>% map(function(x) importCSdata(x))
                   font = list(size = 15))
 ```
 
-## Row {.tabset}
 
 ```{r}
 #| label: plot_GH and GH-CT temeperatures/RH
