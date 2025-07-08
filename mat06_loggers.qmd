@@ -31,89 +31,77 @@ blk3_2 <-  "./current/MAT06_BLK3_Soil.dat"
 
 logger_file <-  c(blk1_1,blk1_2,blk1_3,blk2_1,blk3_1,blk3_2)
 
-# Read all tables into a dataframe
+# Read all tables into a data frame
 
 logger_data<- logger_file %>% map(function(x) importCSdata(x))
 
+# Set up data frames
+met_data <-  logger_data[[1]] %>%
+  rename(ct_air_3m_avg = air_3m_avg, ct_rh = rh) %>%
+  clean_names() %>%
+  arrange(timestamp)%>%
+  filter(timestamp > max(timestamp) %m-% months(6))
 
+soil_data <- logger_data[[2]]  %>% 
+  clean_names() %>%
+  arrange(timestamp)%>%
+  filter(timestamp > max(timestamp) %m-% months(6))
+
+soil_GH_data <- logger_data[[3]]  %>% 
+  clean_names() %>%
+  arrange(timestamp)%>%
+  filter(timestamp > max(timestamp) %m-% months(6))
+
+met_data_blk2 <-  logger_data[[4]] %>%
+  rename(gh_air_avg = ghairtc_avg, gh_rh = ghrh) %>% 
+  clean_names() %>%
+  arrange(timestamp)%>%
+  filter(timestamp > max(timestamp) %m-% months(6))
+
+# set the min and max for the initial x axis display in ggplotly
+max_date <- max(c(met_data$timestamp,soil_data$timestamp,soil_GH_data$timestamp,
+                  met_data_blk2$timestamp))
+min_date <-max_date - lubridate::days(5) 
+# ---- Setting up interactive plots with ggplotly-------
+# Note for rangeslider to work:
+# the dynamicTicks needs to be true for the buttons to show
+# autorange needs to be FALSE for range to work
+
+# Define xaxis options for using a range slider
+xax<- list( 
+  autorange=F,
+  range= list(min_date, max_date),
+  rangeselector = list(
+    buttons = list(
+      list(count = 1, label = "1 week", strp ="week", stepmode = "backward"),
+      list(count = 3, label = "3 mo", step = "month", stepmode = "backward"),
+      list(count = 6, label = "6 mo", step = "month", stepmode = "backward"),
+      list(count = 1, label = "YTD", step = "year", stepmode = "todate"),
+      list(step = "all")
+    )),
+  rangeslider = list(type = "date", thickness=0.05))
+
+# Create a list of arguments for the annotation layout to add titles to the subplots
+anno_agr <-list(x = .5,
+                text = "",
+                y = 1,
+                yref = "paper",
+                xref = "paper",
+                xanchor = "center",
+                yanchor = "top",
+                yshift = 20,
+                showarrow = FALSE,
+                font = list(size = 15))
 ```
-
-# Documentation
-
-::: {.card }
-Campbell Scientific data logger are setup in blocks 1 and 3 to monitor the greenhouse and control air temperature/RH, soil temperatures and soil moisture. Block 2 only monitors greenhouse air temperature/RH.
-
-:::
 
 # Block 1
 
 ## Row {.tabset}
 
-```{r}
-#| label: setup_dataframes
-#| echo: false
-#| output: false
+::: {.card title="Documentation"}
 
-  met_data <-  logger_data[[1]] %>%
-    rename(ct_air_3m_avg = air_3m_avg, ct_rh = rh) %>%
-    clean_names() %>%
-    arrange(timestamp)%>%
-    filter(timestamp > max(timestamp) %m-% months(6))
-  
-  
-  soil_data <- logger_data[[2]]  %>% 
-    clean_names() %>%
-    arrange(timestamp)%>%
-    filter(timestamp > max(timestamp) %m-% months(6))
-  
-  
-  soil_GH_data <- logger_data[[3]]  %>% 
-    clean_names() %>%
-    arrange(timestamp)%>%
-    filter(timestamp > max(timestamp) %m-% months(6))
-  
-  met_data_blk2 <-  logger_data[[4]] %>%
-    rename(gh_air_avg = ghairtc_avg, gh_rh = ghrh) %>% 
-    clean_names() %>%
-    arrange(timestamp)%>%
-    filter(timestamp > max(timestamp) %m-% months(6))
-  
-  # set the min and max for the initial x axis display in ggplotly
-  max_date <- max(c(met_data$timestamp,soil_data$timestamp,soil_GH_data$timestamp,
-                    met_data_blk2$timestamp))
-  min_date <-max_date - lubridate::days(5) 
-  # ---- Setting up interactive plots with ggplotly-------
-  # Note for rangeslider to work:
-  # the dynamicTicks needs to be true for the buttons to show
-  # autorange needs to be FALSE for range to work
-  
-  # Define xaxis options for using a range slider
-  xax<- list( 
-    autorange=F,
-    range= list(min_date, max_date),
-    rangeselector = list(
-      buttons = list(
-        list(count = 1, label = "1 week", strp ="week", stepmode = "backward"),
-        list(count = 3, label = "3 mo", step = "month", stepmode = "backward"),
-        list(count = 6, label = "6 mo", step = "month", stepmode = "backward"),
-        list(count = 1, label = "YTD", step = "year", stepmode = "todate"),
-        list(step = "all")
-      )),
-    rangeslider = list(type = "date", thickness=0.05))
-  
-# Create a list of arguments for the annotation layout to add titles to the subplots
-  anno_agr <-list(x = .5,
-                  text = "",
-                  y = 1,
-                  yref = "paper",
-                  xref = "paper",
-                  xanchor = "center",
-                  yanchor = "top",
-                  yshift = 20,
-                  showarrow = FALSE,
-                  font = list(size = 15))
-```
-
+{{< include documentation/MAT06block1.md >}}
+:::
 
 ```{r}
 #| label: plot_GH and GH-CT temeperatures/RH
