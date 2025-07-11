@@ -5,6 +5,7 @@ format: dashboard
 ---
 
 ```{r}
+#| label: Load required packages and read in datasets
 #| echo: false
 #| output: false
 # REQUIRED PACKAGES ------------------------------------------------------
@@ -97,11 +98,6 @@ anno_agr <-list(x = .5,
 # Block 1
 
 ## Row {.tabset}
-
-::: {.card title="Documentation"}
-
-{{< include documentation/MAT06block1.md >}}
-:::
 
 ```{r}
 #| label: plot_GH and GH-CT temeperatures/RH
@@ -299,6 +295,11 @@ subplot(sp1_p,sp2_p, nrows=2, shareX = TRUE,titleY = T)#%>%
 
 ```
 
+::: {.card title="Documentation"}
+
+{{< include documentation/MAT06block1.md >}}
+:::
+
 # Block 2
 
 ```{r}
@@ -401,6 +402,8 @@ subplot(
 
 # Block 3
 
+## Row {.tabset}
+
 ```{r}
 #| echo: false
 #| title: "Greenhouse and control air temperature and RH and battery"
@@ -420,8 +423,6 @@ subplot(
  xax$range <- list(min_date, max_date)
 
 ```
-
-## Row {.tabset}
 
 ```{r}
 #| label: plot GH and GH-CT temperatures/RH
@@ -614,3 +615,8 @@ subplot(p2_p,p1_p,p4_p, nrows=3, shareX = TRUE,titleY = T,
 
 
 ```
+
+::: {.card title="Documentation"}
+
+{{< include documentation/MAT06block3.md >}}
+:::
