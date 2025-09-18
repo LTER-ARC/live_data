@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://LTER-ARC.github.io/live_data/mat06_loggers.html</loc>
-    <lastmod>2025-09-17T07:01:40.145Z</lastmod>
-  </url>
-  <url>
-    <loc>https://LTER-ARC.github.io/live_data/Toolik_lake_inlet.html</loc>
-    <lastmod>2025-09-17T07:01:40.053Z</lastmod>
+    <loc>https://LTER-ARC.github.io/live_data/other_loggers.html</loc>
+    <lastmod>2025-09-18T16:23:22.681Z</lastmod>
   </url>
   <url>
     <loc>https://LTER-ARC.github.io/live_data/index.html</loc>
-    <lastmod>2025-09-17T07:01:40.145Z</lastmod>
+    <lastmod>2025-09-18T16:23:22.681Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LTER-ARC.github.io/live_data/SHB89_logger.html</loc>
+    <lastmod>2025-09-18T16:23:22.589Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LTER-ARC.github.io/live_data/MAT89_logger.html</loc>
+    <lastmod>2025-09-18T16:23:22.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LTER-ARC.github.io/live_data/DHT89_logger.html</loc>
+    <lastmod>2025-09-18T16:23:22.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LTER-ARC.github.io/live_data/MAT81_logger.html</loc>
+    <lastmod>2025-09-18T16:23:22.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LTER-ARC.github.io/live_data/MNT97_logger.html</loc>
+    <lastmod>2025-09-18T16:23:22.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LTER-ARC.github.io/live_data/Toolik_lake_inlet.html</loc>
+    <lastmod>2025-09-18T16:23:22.589Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LTER-ARC.github.io/live_data/mat06_loggers.html</loc>
+    <lastmod>2025-09-18T16:23:22.681Z</lastmod>
   </url>
 </urlset>

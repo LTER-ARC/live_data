@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Dry Health Tundra – Arctic LTER Live Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9a12a9fd91428d7310cff84c2a132167.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-9a12a9fd91428d7310cff84c2a132167.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9a12a9fd91428d7310cff84c2a132167.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="site_libs/quarto-dashboard/stickythead.js"></script>
+
+
+
+<script src="site_libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="site_libs/quarto-dashboard/components.js"></script>
+
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="quarto-dashboard nav-fixed dashboard-fill fullcontent quarto-light">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Arctic LTER Live Data</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./mat06_loggers.html"> 
+<span class="menu-text">Mat06 loggers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Toolik_lake_inlet.html"> 
+<span class="menu-text">Toolik Lake &amp; Inlet Stations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./other_loggers.html"> 
+<span class="menu-text">Other logger sites</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ARC-LTER/live_data"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">
+
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Dry Health Tundra</a></div>
+        
+        
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-documentation" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#documentation" data-scrolling="false" href="#documentation" aria-controls="documentation" aria-selected="true"><span class="nav-link-text">Documentation</span></a></li><li class="nav-item" role="presentation"><a id="tab-air-temperature-rh-battery-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#air-temperature-rh-battery-data" data-scrolling="false" href="#air-temperature-rh-battery-data" aria-controls="air-temperature-rh-battery-data" aria-selected="false"><span class="nav-link-text">Air Temperature, RH, Battery Data</span></a></li><li class="nav-item" role="presentation"><a id="tab-soil-temperature-and-moisture-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#soil-temperature-and-moisture-data" data-scrolling="false" href="#soil-temperature-and-moisture-data" aria-controls="soil-temperature-and-moisture-data" aria-selected="false"><span class="nav-link-text">Soil Temperature and Moisture Data</span></a></li></ul></div></div>
+</nav>
+</header></header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+<!-- main -->
+
+<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div id="documentation" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-documentation">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="h4">
+Arctic
+
+LTER
+
+Heath
+
+Logger
+
+site
+
+(DHT89)
+</div>
+<strong>Initial setup</strong>
+<p>The plots were set up in 1989 in a randomized three-block design (5-meter by 20-meter plots) with the following treatments:</p>
+<p>(Note: treatments were discontinued in 2023)</p>
+<ul>
+<li>CT - Control untreated plot.</li>
+<li>NP - 10 gm N per meter squared of 34 - 0 - 0 nitrogen fertilizer (34% ammonium nitrate) plus 5 P gm per meter squared of 0 - 45 - 0 fertilizer (45% P as P2O5).</li>
+<li>N - 10 gm N per meter squared of 34 - 0 - 0 nitrogen fertilizer (34% ammonium nitrate) only.</li>
+<li>P - 5 P gm per meter squared of 0 - 45 - 0 fertilizer (45% P as P2O5) only.</li>
+<li>SH - Shading experiment using a 2.4 m x 4.9 m wood frame covered by 50% shade cloth.</li>
+</ul>
+<p>In August 2001, a Campbell Scientific CR10X data logger was installed near block 2 to measure air temperature, soil temperatures, and moisture in the Arctic LTER heath experimental block 2 plots.</p>
+<p>Air temperature and relative humidity (RH) were initially measured with a Campbell Scientific 207 probe, which consisted of a thermistor for temperature measurement and a Phys-Chem Scientific Inc.&nbsp;PCRC11 RH chip for RH measurement. The BetaTHERM 100KA61 thermistor used in 207 was identical to those used in the 107 and 108 temperature probes. Instead of the CR10X 107 instruction for calculating the temperature from resistance, a Steinhart-Hart equation is used to calculate the temperature. For details, see below. The RH chip proved to be problematic, and values are not included.</p>
+<p>In August 2009 Campbell Scientific CS500 Temperature/RH sensor was installed. A 107 was also placed within the same air shield as a backup and for low temperatures. The CS500 lower limit is -39 Celsius.</p>
+<p>Soil temperatures are measured with copper/constantan thermocouple wires (TC) installed at depths of 5 and 10 cm.</p>
+<p>Block 2 control treatment plot has two profiles of soil temperature.</p>
+<p>Block 2 NP plot has four profiles of soil temperatures; two profiles are in a shrubby area and two are in a graminoid area of the plot.</p>
+<p>The following label codes are used: CT = control and NP = fertilized, plus a number for the profile number. All soil sensors are read every 15 minutes and averaged every 3 hours.</p>
+<p>Soil moisture probes are Campbell Scientific CS615 or CS616 placed ~ 5-10 cm in the soil layer. The CS615/616 uses the time-domain measurement method to measure volumetric water content (VWC), generating an electromagnetic pulse. The elapsed travel time and pulse reflection are then measured and used to calculate VWC. <strong>Note</strong>: the CS615 sensors were problematic, and the data from 2002 to 2011 was deleted.</p>
+<p>Soil percent moistures are calculated using the calibration equation:</p>
+<p>% soil moisture = (measure vw * 100) * 0.61 + 7.2.</p>
+<p>The equation was obtained from a dataset that measured soil moisture in the upper organic layer using a Campbell Scientific HydroSense meter and then coring the measured area to determine the gravimetric soil moisture.</p>
+<p><strong>Equipment Description</strong>:</p>
+<p>The following are brief descriptions of the equipment and sensors used:</p>
+<ul>
+<li><p>Campbell Scientific 207 Temperature/RH: BetaTHERM 100KA61 thermistor (accuracy +- 0.4 C) for temperature measurement and a Phys-Chem Scientific Inc.&nbsp;PCRC11 RH chip for RH measurement.</p></li>
+<li><p>Campbell Scientific 107: BetaTHERM 100KA61 thermistor (accuracy +- 0.4 C).</p></li>
+<li><p>Campbell Scientific CS500: a modified version of Vaisala’s 50Y Humitter. The probe measures temperature with a 1000 Ohm platinum resistance thermometer (PRT) and relative humidity (RH) with a 50Y Intercap humidity sensor.</p></li>
+<li><p>Omega Engineering, Copper-Constantan thermocouple wire. Range -200 to 350 °C. Limits of error: Standard wire 1.0°C or 0.75% above 0°C and 1.0°C or 1.5% below 0°C. Special wire 0.5°C or 0.4%.</p></li>
+<li><p>Campbell Scientific CS615/CS616. Specifications: Accuracy: ±3% typical, ±2% with soil specific calibration.</p></li>
+</ul>
+<p>List of manufacturers and suppliers.</p>
+<ul>
+<li><p>Campbell Scientific, Inc.&nbsp;81 W. 1800 N. Logan, Utah 84321-1784 (435)750-1739</p></li>
+<li><p>Omega Engineering, Inc.&nbsp;P.O. Box 4047 Stamford, CT 06907-0047 (800)826-6342</p></li>
+</ul>
+<strong>Notes and Changes:</strong>
+<ul>
+<li><p>2009-08-10. Added in CS500 Temp/RH at 3 meters.2012-06-06. Replaced the CR10x with a recalibrated one; Maxon radio stopped working. Broken wires in connector. Reconnected still didn’t work so replaced with RF401 address 8. Jim L2012-06-08. Replaced the old 107 (207) with a new 107 placed in the same shield as the CS500 Jim L</p></li>
+<li><p>2012-08-10. Upgraded the CR10x OS to a PakBus OS to use PakBus radio network. Re-wrote Subroutine 1 to use the Steinhart-Hart instruction P200.</p></li>
+<li><p>2020-05-21. The input location for the RH was wrong. Should be SE 5 not 4. It must of changed when I upgraded the OS to PakBusOS. I saw the mistake when documenting the inputs for the crew at TSF to troubleshoot the soil temp multiplexer and from a picture of the wiring. Jim L</p></li>
+<li><p>2020-07-01. The thermocouples on the AM416 stopped working in April. After testing with a different wire and since the soil moisture probes are still working, moving the thermocouples to a AM25T S/N #1540. Finally working on Aug 8, 2020 Jim L</p></li>
+</ul>
+<strong>Notes from the Subroutine for Steinhart Hart equation from logger program.</strong>
+<p>To get better accuracy for Campbell Scientific’s 107 Belatherm 100K6A Thermistor a subroutine is used in non-CRBasic loggers. The thermistor’s resistance is measured, and a Steinhart-Hart equation is used to calculate the temperature. This improves the accuracy at low temperatures over the logger’s instruction for thermistors which uses a polynomial for the conversion from resistance to temperature. Note that Campbell’s loggers with CRBasic now use the Steinhart-Hart equation for thermistors.</p>
+<strong>Details on the subroutine.</strong>
+<p>Logger reads reference temperature with a bridge statement and then converts the bridge voltage to resistance using Rs=Rf(Vx/Vs-1)-Rb, where bridge resistors Rf and Rb are 1 and 249 K ohms respectively, Vs is the voltage read and Vx is the excitation voltage. The Steinhart Hart equation is: 1/T = A + B(ln Rs) + C(ln Rs)^3 where coefficients are:</p>
+<ul>
+<li><p>Campbell’s older 107 probe - the Fenwall UUT51J1 Thermistor A 8.4634e-04, B 2.0627e-04 and C 8.6958e-08</p></li>
+<li><p>Campbell’s newer thermistor - Belatherm 100K6A or now Measurement Specialties 100K6A1iA (probably changed sometime around 2000) A 8.271111x10-4 B 2.088020x10-4 C 8.059200x10-8</p></li>
+</ul>
+<p>The coefficients for Fenwall UU51J1 are from the Technical Memorandum by Gary Clow USGS Menlo Park, CA. For the newer thermistors, the coefficients are from Campbell Scientific’s 107 manual.</p>
+<p>Prior to 2012-08-10 the polynomial instruction, 55, is used to apply the Steinhart and Hart equation. Instruction 55 does not allow entering the coefficients with scientific notation. To use this instruction with as much resolution as possible, the In resistance term is pre-scaled by 10^-3. This allows the first-order coefficient (B) to be multiplied by 10^3 and the 3rd order coefficient (C) to be multiplied by 10^9. However, for the 107 thermistors, C0 is still too small for Instruction 55. So, it is set to 0, and then P30 is used to store the C0 value, and then added with P33. Adapted from Campbell Scientific’s 109 manual, Revision: 2/07.</p>
+<p>After 2012-08-10, the logger’s Steinhart-Hart instruction P200 is used.</p>
+<p>Program adapted from Campbell Scientific’s 107 manual (https://www.campbellsci.com/107).</p>
+<strong>Current Data Tables</strong>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 45%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Half-hourly met data</strong></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TIMESTAMP</td>
+<td></td>
+<td>YYYY-MM-DD hh:mm</td>
+</tr>
+<tr class="even">
+<td>RECORD</td>
+<td></td>
+<td>number</td>
+</tr>
+<tr class="odd">
+<td>CS500Temp_AVG</td>
+<td>Air temperature at 3 meters. From 2001 to August 2009 the sensor was a Campbell Scientific 107 using the Steinhart-Hart equation for greater low-temperature accuracy. In 2009, a CS500 sensor was added. For temperatures below -39 C (lower limit of the CS500), 107 probe readings were substituted.</td>
+<td>clesius</td>
+</tr>
+<tr class="even">
+<td>CS500_RH_AVG</td>
+<td>Percent relative humidity at 3 meters</td>
+<td>percent</td>
+</tr>
+<tr class="odd">
+<td>Pyranomet_AVG</td>
+<td>LiCor pyranometer LI200 at about 1 meter. Minimally maintained.</td>
+<td>kilowattPerMeterSquaredPerSecond</td>
+</tr>
+<tr class="even">
+<td>Air107_AVG</td>
+<td>CampbellSci 107 temperature probe. In the same radiation shield as the CS500 sensor.</td>
+<td>clesius</td>
+</tr>
+<tr class="odd">
+<td>Air107cor_AVG</td>
+<td>Use the Steinhart-Hart equation to calculate 107 temperature values.</td>
+<td>clesius</td>
+</tr>
+<tr class="even">
+<td><strong>Three-hourly soil data</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Variable</td>
+<td>Description</td>
+<td>Units</td>
+</tr>
+<tr class="even">
+<td>TIMESTAMP</td>
+<td>Time stamp. Date of collection: Alaska Standard Time</td>
+<td>YYYY-MM-DD hh:mm</td>
+</tr>
+<tr class="odd">
+<td>RECORD</td>
+<td>Record number since the program compiled</td>
+<td>number</td>
+</tr>
+<tr class="even">
+<td>CS616_CTuSec_AVG</td>
+<td>Control plot soil moisture, Campbell Science CS616 period output in microseconds. Probe is in upper 10 cm of soil.</td>
+<td>microsecond</td>
+</tr>
+<tr class="odd">
+<td>CS616_NPuSec_AVG</td>
+<td>Nitrogen and phosphorus plot soil moisture, Campbell Science CS616 period output in microseconds. Probe is in upper 10 cm of soil.</td>
+<td>microsecond</td>
+</tr>
+<tr class="even">
+<td>CS616_CTvw_AVG</td>
+<td>Control plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. Probe is in upper 10 cm of soil.</td>
+<td>gramPerGram</td>
+</tr>
+<tr class="odd">
+<td>CS616_NPvw_AVG</td>
+<td>Nitrogen and phosphorus plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. Probe is in upper 10 cm of soil.</td>
+<td>gramPerGram</td>
+</tr>
+<tr class="even">
+<td>TrimeMo_AVG</td>
+<td>Trime soil moisture sensor. Not connected.</td>
+<td>percent</td>
+</tr>
+<tr class="odd">
+<td>Battery_V_AVG</td>
+<td>Data logger battery volts</td>
+<td>volts</td>
+</tr>
+<tr class="even">
+<td>TC1_5cm_AVG</td>
+<td>Soil temperature at 5 cm in control plot - replicate probe 1</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>TC1_10cm_AVG</td>
+<td>Soil temperature at 10 cm in control plot - replicate probe 1</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>TC2_5cm_AVG</td>
+<td>Soil temperature at 5 cm in control plot - replicate probe 2</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>TC2_10cm_AVG</td>
+<td>Soil temperature at 10 cm in control plot - replicate probe 2</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>CTcanopy_AVG</td>
+<td>Air temperature control canopy using a thermocouple inside a Hobo radiation shield. Not much canopy, so really is above the canopy.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NP1_5cm_AVG</td>
+<td>Soil temperature at 5 cm in NP plot - replicate probe 1</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NP1_10cm_AVG</td>
+<td>Soil temperature at 10 cm in NP plot - replicate probe 1</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NP2_5c_AVG</td>
+<td>Soil temperature at 5 cm in NP plot - replicate probe 2</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NP2_10cm_AVG</td>
+<td>Soil temperature at 10 cm in NP plot - replicate probe 2</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NP3_5cmSH_AVG</td>
+<td>Soil temperature at 5 cm in NP plot shrub area - replicate probe 3</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NP310cmSH_AVG</td>
+<td>Soil temperature at 10 cm in NP plot shrubby area - replicate probe 3</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NP4_5cm_AVG</td>
+<td>Soil temperature at 5 cm in NP plot shrubby area - replicate probe 4</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NP4_10cm_AVG</td>
+<td>Soil temperature at 10 cm in NP plot shrubby area - replicate probe 4</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NP_within_AVG</td>
+<td>Air temperature in NP canopy using a thermocouple inside a Hobo radiation shield.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NP_above_AVG</td>
+<td>Air temperature above NP canopy using a thermocouple inside a Hobo radiation shield.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>Vs_Vx_AVG</td>
+<td>Half bridge P5 returns V/Vx and is stored in Vs_Vx input location</td>
+<td>ratio</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="h4">
+Wiring
+
+Diagram
+</div>
+<p>CR1000 <a href="other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-logger.pdf" target="_blank">PDF</a> AM416 multiplexer <a href="other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-AM416.pdf" target="_blank">PDF</a> AM25T multiplexer <a href="other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-AM25T.pdf" target="blank">PDF</a></p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div id="air-temperature-rh-battery-data" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-air-temperature-rh-battery-data">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p><strong>Note:</strong> <u><strong>These data are provisional and have not been error-checked.</strong></u> The weather station’s time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are hourly or half-hourly averages. <embed src="other_sites/DHT89met.html" style="width:100.0%" height="800"></p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div id="soil-temperature-and-moisture-data" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-soil-temperature-and-moisture-data">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p><strong>Note:</strong> <u><strong>These data are provisional and have not been error-checked.</strong></u> The weather station’s time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are three hourly averages. <embed src="other_sites/DHT89soil.html" style="width:100.0%" height="800"></p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+
+
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/LTER-ARC\.github\.io\/live_data\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Arctic LTER</p>
+<div class="toc-actions"><ul><li><a href="https://github.com/ARC-LTER/live_data/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
+
+
+
+</body></html>
