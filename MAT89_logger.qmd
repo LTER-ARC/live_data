@@ -1,0 +1,75 @@
+---
+title: "MAT89_logger"
+editor: visual
+format: dashboard
+---
+
+# Documentation
+
+::: card
+In 1990, a data logger and sensors for weather and soil temperatures were installed in block 2 of the Moist Acidic Tundra (MAT89) site at the Arctic Long Term Ecological Research Site (ARC LTER) Toolik Field Station, North Slope, Alaska.
+
+Sensors in the control plot include: global solar radiation, photosynthetic active radiation(PAR), unfrozen precipitation, air temperature, relative humidity, wind speed, and wind direction at 3 meters. Additional seasons in greenhouse and shade house plots measure air temperature, relative humidity, and photosynthetic active radiation during the growing season. These sensors are read every minute and averaged or totaled every hour.
+
+For sensor and column labels, CT = Control, GH = Greenhouse, and SH = shade house. Note that shade cloth and plastic greenhouse material are attached to a permanent frame structure every spring (early to mid June) and removed in late August each year. Thus, temperature measurements in the control plot may be representative of all three sites when the covers are not present.
+
+NOTES:
+
+-   IMPORTANT NOTE REGARDING WINTER and LATE FALL/EARLY SPRING: Instruments are NOT maintained from mid-August (actual date varies by year) to mid-June (date also varies by year). SENSORS MAY BE COVERED WITH SNOW and/or FROZEN. Blatantly erroneous data has been removed; however, all data from winter months must be used with caution.
+-   The covers on greenhouses and shade houses are removed every fall and reinstalled every spring as described above.
+-   Only unfrozen precipitation is reported.
+-   Soil temperatures are problematic since frost heaving of the probes caused the depth of measurements to change.
+-   For the global solar radiation and photosynthetic active radiation sensors, no attempt is made to correct for frost or snow on the sensors during the winter months. Therefore, winter radiation data should be viewed as suspect and used only qualitatively.
+
+CALCULATIONS:
+
+PYR TOTAL CM2 HOUR: PYRANOMETER \* 0.3600 jcm2 \* 1000 Watt/Kwatt
+
+Sensor errors, erroneous data, and values outside the instrument's range are indicated by NA. Before 1995, two temperature/RH and PAR sensors were installed in the greenhouses and shade houses, one in the north end of the plot (indicated by N) and the other in the south end (S). From 1995 onward, these were replaced with a single sensor in the center of the houses. The columns for N & S were continued in later years despite no data for ease of analysis when multiple years are compared.
+
+Sensor Descriptions
+
+-   PYRANOMETER: Li-Cor, Pyranometer: Model LI-200SA- Sensor measures global solar radiation (sun plus sky). Specs: Sensitivity - 80mA per 1000 Watts m-2. Absolute error max ±5% but typically ±3
+
+-   QUANTUM: Li-Cor, Quantum. Model LI-190SB. Quantum measure photosynthetically active radiation (PAR) in mmol s-1 m-2. Specs: range 400-700nm wavelength. Sensitivity 8mA/1000 mmol s-1 m-2. Relative error less then ±10% for plant canopies or less then ±5% for growth chambers. Toolik.
+
+-   RELATIVE HUMIDITY/TEMPERATURE: Campbell Scientific, CS500 Temperature and Relative Humidity Probe. Uses PRT for temperature measurement; capacitive RH chip for RH. Accuracy is ±3% over 10-90% RH; ±6% over 90-100% RH. Manufactured by Vaisala, Inc.
+
+-   WIND DIRECTION: MET-ONE, (supplied by Campbell Scientific) Wind direction uses a lightweight, airfoil vane and a potentiometer to produce an output that varies proportionally with wind direction. Specs: Minimum Wind speed to get an accurate reading = 1.0 mph. Accuracy ±5° Temperature range -50 to 70°C.
+
+-   WIND SPEED: MET-ONE, (supplied by Campbell Scientific) Wind speed sensor Model 014A. Sensor uses a 3-cup anemometer assembly and a simple magnet-read switch assembly to produce a series of contact closures whose frequency is proportional to wind speed. Specs: Operating Range - 0 to 125 mph or 0-60 m/s. Accuracy ±1.5% or 0.25 mph. Working temperature range - -50 to 85°C
+
+-   RAIN GAUGE: Texas Electronics, Inc. (supplied by Campbell Scientific) Tipping Bucket Electric Rain Gauge. A complex spun collector funnel with a knife edge that diverts the water to a tipping bucket mechanism. For each tip a magnet causes an electronic pulse that is recorded. Each alternate tip occurs for each 0.01 inch of rainfall. Specs: Accuracy 1% at 2 inches/hr or less. Accurate Temperature Range: 0 - 37°C. Alter windshield installed around the gauge.
+
+-   THERMOCOUPLES: Omega Engineering, Copper-Constantan wire. Range -200 to 350 °C. Limits of error: Standard wire 1.0°C or 0.75% above 0°C and 1.0°C or 1.5% below 0°C. Special wire 0.5°C or 0.4%.
+
+**List of manufacturers and suppliers.**
+
+Campbell Scientific, Inc. 81 W. 1800 N. Logan, Utah 84321-1784 (435)750-1739\
+Li-Cor : 4421 Superior St, P.O. Box 4425, Lincoln, Nebraska 68504 (800)447-3576\
+Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
+
+## Log of changes
+
+1995-06-25 Took out the AM32 multiplexer; water may have caused it to malfunction. It gave bad readings on Temp/RH sensors. Reduced the GH & SH to one quantum and Temp/RH sensor each. The notation of 1 and 2 for TC's are as follows: 1 - tc's placed in a tussock, 2- tc's placed in a moss bed.\
+1999-06-08 Installed New Temp/RH CS500\
+2002-08-12 Installed another multiplexer for more soil temperatures. Moved quantums to multiplexer number two to make room.\
+2003-08-10 Moved CT quantum back to the data logger to make it easier to change out. Replaced the CT CS500 with a repaired one. The previous one leaked into the cable joint. Replaced the datalogger with one sent back from Campbell. The old one was giving a negative reading for the radiation sensors. Took out SH and GH CS500. Will send them back for repair.\
+2015-08-15 Corrected the coefficients for the 107 probe in the Steinhart-Hart P220 instruction. Change to the corrected reference temperature for the thermocouple sensors. Was using the P11 107 instruction.\
+2016-8-16 Changed out wind sensors. Put in WindSp F1864 & WindDir 1411. New multiplier for wind direction.\
+2019-08-10 Changed the logger OS to CR23xPB to use the Pakbus radio network. Changed out wind sensors. Put in: WindSp K2040; WindDir R10462. Updated the multiplier for windir\
+2019-09-26 Using the maximum of wind direction to calculate a new multiplier. Old was 0.365378, new is 0.360721. The old one was about +5 degrees off.\
+2021-09-2 Corrected mistake in Daily Data Table. It should be "2: 86400 Seconds Interval", not "1: 86400 Seconds into Interval".
+
+# Wiring Diagram
+
+CR32x and multiplexers [PDF](other_sites/wiring_files/MAT89_CR23x_Amp416_1&2wiring.pdf){target="_blank"}
+:::
+
+# Air Temperature, RH, PAR, and Wind Direction and Speed
+
+**Note:** [**These data are provisional and have not been error-checked.**]{.underline} The weather station's time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are hourly or half-hourly averages. ![](other_sites/MAT89met.html){width="100%" height="800px"}
+
+# Soil Temperatures and Battery
+
+**Note:** [**These data are provisional and have not been error-checked.**]{.underline} The weather station's time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are three hourly or averages. ![](other_sites/MAT89soil.html){width="100%" height="800px"}

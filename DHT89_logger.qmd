@@ -1,0 +1,147 @@
+---
+title: "Dry Health Tundra"
+editor: visual
+format: dashboard
+---
+
+# Documentation
+
+::: card
+# Arctic LTER Heath Logger site (DHT89)
+
+**Initial setup**
+
+The plots were set up in 1989 in a randomized three-block design (5-meter by 20-meter plots) with the following treatments:
+
+(Note: treatments were discontinued in 2023)
+
+-   CT - Control untreated plot.
+-   NP - 10 gm N per meter squared of 34 - 0 - 0 nitrogen fertilizer (34% ammonium nitrate) plus 5 P gm per meter squared of 0 - 45 - 0 fertilizer (45% P as P2O5).
+-   N - 10 gm N per meter squared of 34 - 0 - 0 nitrogen fertilizer (34% ammonium nitrate) only.
+-   P - 5 P gm per meter squared of 0 - 45 - 0 fertilizer (45% P as P2O5) only.
+-   SH - Shading experiment using a 2.4 m x 4.9 m wood frame covered by 50% shade cloth.
+
+In August 2001, a Campbell Scientific CR10X data logger was installed near block 2 to measure air temperature, soil temperatures, and moisture in the Arctic LTER heath experimental block 2 plots.
+
+Air temperature and relative humidity (RH) were initially measured with a Campbell Scientific 207 probe, which consisted of a thermistor for temperature measurement and a Phys-Chem Scientific Inc. PCRC11 RH chip for RH measurement. The BetaTHERM 100KA61 thermistor used in 207 was identical to those used in the 107 and 108 temperature probes. Instead of the CR10X 107 instruction for calculating the temperature from resistance, a Steinhart-Hart equation is used to calculate the temperature. For details, see below. The RH chip proved to be problematic, and values are not included.
+
+In August 2009 Campbell Scientific CS500 Temperature/RH sensor was installed. A 107 was also placed within the same air shield as a backup and for low temperatures. The CS500 lower limit is -39 Celsius.
+
+Soil temperatures are measured with copper/constantan thermocouple wires (TC) installed at depths of 5 and 10 cm.
+
+Block 2 control treatment plot has two profiles of soil temperature.
+
+Block 2 NP plot has four profiles of soil temperatures; two profiles are in a shrubby area and two are in a graminoid area of the plot.
+
+The following label codes are used: CT = control and NP = fertilized, plus a number for the profile number. All soil sensors are read every 15 minutes and averaged every 3 hours.
+
+Soil moisture probes are Campbell Scientific CS615 or CS616 placed \~ 5-10 cm in the soil layer. The CS615/616 uses the time-domain measurement method to measure volumetric water content (VWC), generating an electromagnetic pulse. The elapsed travel time and pulse reflection are then measured and used to calculate VWC. **Note**: the CS615 sensors were problematic, and the data from 2002 to 2011 was deleted.
+
+Soil percent moistures are calculated using the calibration equation:
+
+\% soil moisture = (measure vw \* 100) \* 0.61 + 7.2.
+
+The equation was obtained from a dataset that measured soil moisture in the upper organic layer using a Campbell Scientific HydroSense meter and then coring the measured area to determine the gravimetric soil moisture.
+
+**Equipment Description**:
+
+The following are brief descriptions of the equipment and sensors used:
+
+-   Campbell Scientific 207 Temperature/RH: BetaTHERM 100KA61 thermistor (accuracy +- 0.4 C) for temperature measurement and a Phys-Chem Scientific Inc. PCRC11 RH chip for RH measurement.
+
+-   Campbell Scientific 107: BetaTHERM 100KA61 thermistor (accuracy +- 0.4 C).
+
+-   Campbell Scientific CS500: a modified version of Vaisala's 50Y Humitter. The probe measures temperature with a 1000 Ohm platinum resistance thermometer (PRT) and relative humidity (RH) with a 50Y Intercap humidity sensor.
+
+-   Omega Engineering, Copper-Constantan thermocouple wire. Range -200 to 350 °C. Limits of error: Standard wire 1.0°C or 0.75% above 0°C and 1.0°C or 1.5% below 0°C. Special wire 0.5°C or 0.4%.
+
+-   Campbell Scientific CS615/CS616. Specifications: Accuracy: ±3% typical, ±2% with soil specific calibration.
+
+List of manufacturers and suppliers.
+
+-   Campbell Scientific, Inc. 81 W. 1800 N. Logan, Utah 84321-1784 (435)750-1739
+
+-   Omega Engineering, Inc. P.O. Box 4047 Stamford, CT 06907-0047 (800)826-6342
+
+**Notes and Changes:**
+
+-   2009-08-10. Added in CS500 Temp/RH at 3 meters.2012-06-06. Replaced the CR10x with a recalibrated one; Maxon radio stopped working. Broken wires in connector. Reconnected still didn't work so replaced with RF401 address 8. Jim L2012-06-08. Replaced the old 107 (207) with a new 107 placed in the same shield as the CS500 Jim L
+
+-   2012-08-10. Upgraded the CR10x OS to a PakBus OS to use PakBus radio network. Re-wrote Subroutine 1 to use the Steinhart-Hart instruction P200.
+
+-   2020-05-21. The input location for the RH was wrong. Should be SE 5 not 4. It must of changed when I upgraded the OS to PakBusOS. I saw the mistake when documenting the inputs for the crew at TSF to troubleshoot the soil temp multiplexer and from a picture of the wiring. Jim L
+
+-   2020-07-01. The thermocouples on the AM416 stopped working in April. After testing with a different wire and since the soil moisture probes are still working, moving the thermocouples to a AM25T S/N #1540. Finally working on Aug 8, 2020 Jim L
+
+**Notes from the Subroutine for Steinhart Hart equation from logger program.**
+
+To get better accuracy for Campbell Scientific's 107 Belatherm 100K6A Thermistor a subroutine is used in non-CRBasic loggers. The thermistor's resistance is measured, and a Steinhart-Hart equation is used to calculate the temperature. This improves the accuracy at low temperatures over the logger's instruction for thermistors which uses a polynomial for the conversion from resistance to temperature. Note that Campbell's loggers with CRBasic now use the Steinhart-Hart equation for thermistors.
+
+**Details on the subroutine.**
+
+Logger reads reference temperature with a bridge statement and then converts the bridge voltage to resistance using Rs=Rf(Vx/Vs-1)-Rb, where bridge resistors Rf and Rb are 1 and 249 K ohms respectively, Vs is the voltage read and Vx is the excitation voltage. The Steinhart Hart equation is: 1/T = A + B(ln Rs) + C(ln Rs)\^3 where coefficients are:
+
+-   Campbell's older 107 probe - the Fenwall UUT51J1 Thermistor A 8.4634e-04, B 2.0627e-04 and C 8.6958e-08
+
+-   Campbell's newer thermistor - Belatherm 100K6A or now Measurement Specialties 100K6A1iA (probably changed sometime around 2000) A 8.271111x10-4 B 2.088020x10-4 C 8.059200x10-8
+
+The coefficients for Fenwall UU51J1 are from the Technical Memorandum by Gary Clow USGS Menlo Park, CA. For the newer thermistors, the coefficients are from Campbell Scientific's 107 manual.
+
+Prior to 2012-08-10 the polynomial instruction, 55, is used to apply the Steinhart and Hart equation. Instruction 55 does not allow entering the coefficients with scientific notation. To use this instruction with as much resolution as possible, the In resistance term is pre-scaled by 10\^-3. This allows the first-order coefficient (B) to be multiplied by 10\^3 and the 3rd order coefficient (C) to be multiplied by 10\^9. However, for the 107 thermistors, C0 is still too small for Instruction 55. So, it is set to 0, and then P30 is used to store the C0 value, and then added with P33. Adapted from Campbell Scientific's 109 manual, Revision: 2/07.
+
+After 2012-08-10, the logger's Steinhart-Hart instruction P200 is used.
+
+Program adapted from Campbell Scientific's 107 manual (https://www.campbellsci.com/107).
+
+**Current Data Tables**
+
+| **Half-hourly met data** |   |   |
+|-------------------|---------------------------------|--------------------|
+| TIMESTAMP |  | YYYY-MM-DD hh:mm |
+| RECORD |  | number |
+| CS500Temp_AVG | Air temperature at 3 meters. From 2001 to August 2009 the sensor was a Campbell Scientific 107 using the Steinhart-Hart equation for greater low-temperature accuracy. In 2009, a CS500 sensor was added. For temperatures below -39 C (lower limit of the CS500), 107 probe readings were substituted. | clesius |
+| CS500_RH_AVG | Percent relative humidity at 3 meters | percent |
+| Pyranomet_AVG | LiCor pyranometer LI200 at about 1 meter. Minimally maintained. | kilowattPerMeterSquaredPerSecond |
+| Air107_AVG | CampbellSci 107 temperature probe. In the same radiation shield as the CS500 sensor. | clesius |
+| Air107cor_AVG | Use the Steinhart-Hart equation to calculate 107 temperature values. | clesius |
+| **Three-hourly soil data** |  |  |
+| Variable | Description | Units |
+| TIMESTAMP | Time stamp. Date of collection: Alaska Standard Time | YYYY-MM-DD hh:mm |
+| RECORD | Record number since the program compiled | number |
+| CS616_CTuSec_AVG | Control plot soil moisture, Campbell Science CS616 period output in microseconds. Probe is in upper 10 cm of soil. | microsecond |
+| CS616_NPuSec_AVG | Nitrogen and phosphorus plot soil moisture, Campbell Science CS616 period output in microseconds. Probe is in upper 10 cm of soil. | microsecond |
+| CS616_CTvw_AVG | Control plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. Probe is in upper 10 cm of soil. | gramPerGram |
+| CS616_NPvw_AVG | Nitrogen and phosphorus plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. Probe is in upper 10 cm of soil. | gramPerGram |
+| TrimeMo_AVG | Trime soil moisture sensor. Not connected. | percent |
+| Battery_V_AVG | Data logger battery volts | volts |
+| TC1_5cm_AVG | Soil temperature at 5 cm in control plot - replicate probe 1 | celsius |
+| TC1_10cm_AVG | Soil temperature at 10 cm in control plot - replicate probe 1 | celsius |
+| TC2_5cm_AVG | Soil temperature at 5 cm in control plot - replicate probe 2 | celsius |
+| TC2_10cm_AVG | Soil temperature at 10 cm in control plot - replicate probe 2 | celsius |
+| CTcanopy_AVG | Air temperature control canopy using a thermocouple inside a Hobo radiation shield. Not much canopy, so really is above the canopy. | celsius |
+| NP1_5cm_AVG | Soil temperature at 5 cm in NP plot - replicate probe 1 | celsius |
+| NP1_10cm_AVG | Soil temperature at 10 cm in NP plot - replicate probe 1 | celsius |
+| NP2_5c_AVG | Soil temperature at 5 cm in NP plot - replicate probe 2 | celsius |
+| NP2_10cm_AVG | Soil temperature at 10 cm in NP plot - replicate probe 2 | celsius |
+| NP3_5cmSH_AVG | Soil temperature at 5 cm in NP plot shrub area - replicate probe 3 | celsius |
+| NP310cmSH_AVG | Soil temperature at 10 cm in NP plot shrubby area - replicate probe 3 | celsius |
+| NP4_5cm_AVG | Soil temperature at 5 cm in NP plot shrubby area - replicate probe 4 | celsius |
+| NP4_10cm_AVG | Soil temperature at 10 cm in NP plot shrubby area - replicate probe 4 | celsius |
+| NP_within_AVG | Air temperature in NP canopy using a thermocouple inside a Hobo radiation shield. | celsius |
+| NP_above_AVG | Air temperature above NP canopy using a thermocouple inside a Hobo radiation shield. | celsius |
+| Vs_Vx_AVG | Half bridge P5 returns V/Vx and is stored in Vs_Vx input location | ratio |
+
+------------------------------------------------------------------------
+
+# Wiring Diagram
+
+CR1000 [PDF](other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-logger.pdf){target="_blank"} AM416 multiplexer [PDF](other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-AM416.pdf){target="_blank"} AM25T multiplexer [PDF](other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-AM25T.pdf){target="blank"}
+:::
+
+# Air Temperature, RH, Battery Data
+
+**Note:** [**These data are provisional and have not been error-checked.**]{.underline} The weather station's time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are hourly or half-hourly averages. ![](other_sites/DHT89met.html){width="100%" height="800px"}
+
+# Soil Temperature and Moisture Data
+
+**Note:** [**These data are provisional and have not been error-checked.**]{.underline} The weather station's time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are three hourly averages. ![](other_sites/DHT89soil.html){width="100%" height="800px"}
