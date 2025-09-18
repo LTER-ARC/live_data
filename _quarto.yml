@@ -17,6 +17,7 @@ website:
         href: index.qmd
       - mat06_loggers.qmd
       - Toolik_lake_inlet.qmd
+      - other_loggers.qmd
     right: 
       - icon: github
         href: https://github.com/ARC-LTER/live_data
