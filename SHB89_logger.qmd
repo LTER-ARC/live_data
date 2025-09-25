@@ -1,0 +1,47 @@
+---
+title: "SHB89_logger"
+editor: visual
+format: dashboard
+---
+
+# Documentation
+
+::: card
+**Initial setup**
+
+FreeWave radio FGR115 9178140
+
+**Equipment Description**:
+
+
+**List of manufacturers and suppliers.** Campbell Scientific, Inc. 81 W. 1800 N. Logan, Utah 84321-1784 (435)750-1739 Omega Engineering, Inc. P.O. Box 4047 Stamford, CT 06907-0047 (800)826-6342
+
+
+**Log of Changes**
+
+2007-08-10 Added an if statement to corrected reference temperatures below -28 with an polynomial.  Also changed output so year is add to the output.\
+2009-06-09 Put the Trime back on.\
+2009-08-09 Added 109 sensor for air temperature. Moved the soil temperature statements to table 2 and the 109 using the Steinhart-Hart equation. Note need two subroutine since the 109 and 107 have different thermisters. Added control port 6 control on powering the Trime soil moisture sensor. Should be off during the winter.\
+
+2014-08-09 Using CR1000 serial number 43615 Calibration. GH2 AND GHF2 are switched. correcting the program. 
+
+; NOTES: Soil temps in the LTER Shrub site treatment plots using a AM416 multiplexer.
+; 2 strings per treatment with sur, 10, 20, 40 and 5 and 100 cm in cts.
+; CT, NP, GH, GHF in block 2.
+
+
+# Wiring Diagram
+
+CR1000 program with wiring notes [PDF](other_sites/wiring_files/SHB89_2014_Soil_PAR-Temp_2020.pdf){target="_blank"} 
+
+:::
+
+# Air Temperature, RH, and Battery
+
+**Note:** [**These data are provisional and have not been error-checked.**]{.underline} The weather station's time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are hourly or half-hourly averages. ![](other_sites/SHB89met.html){width="100%" height="800px"}
+
+# Soil Temperatures and Moistures
+
+**Note:** [**These data are provisional and have not been error-checked.**]{.underline} The weather station's time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are three hourly or averages. ![](other_sites/SHB89soil.html){width="100%" height="800px"}
+
+------------------------------------------------------------------------

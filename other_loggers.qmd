@@ -1,0 +1,44 @@
+---
+title: "Other logger sites"
+editor: visual
+format: dashboard
+---
+
+# Site List
+
+::: card
+Other experimental plots with loggers.
+
+# Dry Heath Tundra 1989 plots (DHT89)
+
+![](other_sites/images/DHT89_station.JPG){fig-align="left" width="80"} [Recent data plots.](DHT89_logger.qmd)
+
+# Arctic LTER 1981 Moist Acidic Tussock “Historic” (MAT81)
+
+![](other_sites/images/MAT81_metstation.jpg){fig-align="left" width="80"} [Recent data plots.](MAT81_logger.qmd)
+
+# Moist Acidic Tussock Tundra 1989 plots (MAT89)
+
+![](other_sites/images/MAT89_B2_metstation.jpg){fig-align="left" width="80"} [Recent data plots.](MAT89_logger.qmd)
+
+# Moist Non-Acidic Tussock Tundra 1997 plots (MNT97)
+
+![](other_sites/images/MNT97_metstation.jpg){fig-align="left" width="80"} [Recent data plots.](MNT97_logger.qmd)
+
+# Shrub Tundra 1989 plots (SHB89)
+
+![](other_sites/images/SHB89_B2_metstation.jpg){fig-align="left" width="80"} [Recent data plots.](SHB89_logger.qmd)
+
+# Wet Sedge Tundra 1989 plots (WSG89)
+
+![](other_sites/images/WSG89_metstation.jpg){fig-align="left" width="80"} [Recent data plots.](WSG89_logger.qmd)
+
+# Tussock Watershed Soil Station
+
+![](other_sites/images/TWsoil_logger_2010.jpg){fig-align="left" width="80"} [Recent data plots.](TWsoil_logger.qmd)
+
+# Imnavait Solar Radiation Station
+
+![](other_sites/images/Imnavait_SolarRadiationStation.jpg){fig-align="left" width="80"} [Recent data plots.](Imnav_Solar_rad_logger.qmd)
+
+:::

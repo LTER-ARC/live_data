@@ -19,8 +19,7 @@ source("importCSdata.r")
 
 # Documentation
 
-::: {.card }
-
+::: card
 ## Lake Station
 
 The meteorological station on the surface of Toolik Lake was first installed in the spring of 1998. Originally, the station recorded air temperature, relative humidity, wind speed, and wind direction. In 1999, a Kipp and Zonen CM3 radiation instrument was added to record the downwelling and upwelling of longwave and shortwave radiation. Measurements of all variables are taken at a 30-second interval, averaged every 5 minutes, and logged into a Campbell Scientific CR10x datalogger or, starting in 2007, a Campbell CR1000 datalogger (or equivalent).
@@ -32,9 +31,7 @@ The meteorological station is anchored in place as soon as possible in June (whe
 Water level, conductivity, and temperature are recorded during ice free months with a Stevens PGIII Pulse Generator and a Model 247 Conductivity (EC) and Temperature probe. A Campbell Scientific CR800 data logger is used to record the sensors.
 
 Discharge measurements are taken throughout each season to determine the stage-discharge relationship. When the stage heights exceed our range from the study year's rating curve, we apply a standardized composite rating curve (from 1996-2013) for Toolik Inlet to solve for stream discharge. Temperature data are rounded to the nearest tenth of a degree Celsius, and conductivity data are rounded to the nearest tenth of uS/cm, in accordance with the sensor manufacturer's specification. Discharge data were rounded to 3 significant digits.
-
 :::
-
 
 # Lake Station
 

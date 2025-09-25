@@ -152,7 +152,7 @@ anno_agr <-list(x = .5,
           layout(xaxis= xax,
                  annotations = anno_agr) %>%
     partial_bundle()
-  
+   anno_agr$text <- "Battery"
 p3_p <- ggplotly( 
     ggplot(met_data) +
     geom_line(aes(x=timestamp, y=battv_min, color = "Battery min")) +

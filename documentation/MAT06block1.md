@@ -1,7 +1,30 @@
+# Block 1
+
+Air temperature/RH, soil temperatures, and soil moisture are measured in the greenhouse, control, and F10 treatment plots. The station was first set up in 2008, using Hobo loggers to measure soil temperatures in the control and F10 plots.  Three replicate depth profiles (surface, 10, 20 cm) at the 5, 10, and 15 meter stakes were installed about 1-2 meters inside the plots. In 2012, a CR21x logger with type T thermocouples replaced the Hobos. In 2018, a CR1000 with air temperature/RH, soil temperature, and moisture was added to the greenhouse plot and the control portion of the greenhouse plot. In 2023, the AM25T multiplexer was wired to the CR1000, eliminating the separate soil logger.
+
+## Data loggers
+
+**Current setup:** Campbell Science CR1000 LOGGER with AM25T multiplexer
+
+ **Sensor Descriptions** 
+
+* RELATIVE HUMIDITY/TEMPERATURE: Campbell Scientific, CS500 Temperature and Relative Humidity Probe. Uses PRT for temperature measurement, a capacitive RH chip for RH. Accuracy is ±3% over 10-90% RH; ±6% over 90-100% RH. Manufactured by Vaisala, Inc.
+
+* THERMOCOUPLES: Omega Engineering, Copper-Constantan wire. Range -200 to 350 °C. Limits of error: Standard wire 1.0°C or 0.75% above 0°C and 1.0°C or 1.5% below 0°C. Special wire 0.5°C or 0.4%.
+
+* 107 THERMISTERS: Campbell Scientific, BetaTherm 100K6A1IA Thermistor, tolerance - ±0.2°C, 
+
+* SOIL MOISTURE: Campbell Scientific, CS616, water content accuracy - ±2.5% VWC (using standard calibration with bulk EC of ≤ 0.5 dS m-1, bulk density of ≤ 1.55 g cm-3, and measurement range of 0% to 50% VWC) **NOTE: need to apply correction for measuring in peaty soils.**
+
+**List of manufacturers and suppliers.**
+
+Campbell Scientific, Inc. 81 W. 1800 N. Logan, Utah 84321-1784 (435)750-1739\
+Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
+
 #### **Log of Changes**
 
 * 2008  Added Hobo loggers to CT and F10 plots. Three replicate depth profiles (surface, 10, 20 cm).
-* 2012-07-13 Campbell Scientific 21X logger with AM25T multiplexer (Longitude -149.609083 Latitude 68.622629) set up in MAT06 Block 1 CT (control) and F10 plots measuring soil temperatures using type T thermocouples. Three replicate depth profiles (surface, 10, 20 cm) were installed at the 5, 10, and 15 meter south side plot stakes about 1-2 meters inside the plots. A small pit was cut into the soil and the thermocouples were inserted into the side wall of the pit.
+* 2012-07-13 Campbell Scientific 21X logger with AM25T multiplexer (Longitude -149.609083, Latitude 68.622629) set up in MAT06 Block 1 CT (control) and F10 plots measuring soil temperatures using type T thermocouples. Three replicate depth profiles (surface, 10, 20 cm) were installed at the 5, 10, and 15 meter south side plot stakes about 1-2 meters inside the plots. A small pit was cut into the soil and the thermocouples were inserted into the side wall of the pit.
 * 2018-06-11 CR1000 logger station with air/RH CS500 sensors in and out of the greenhouse. Using repurposed SC616 soil moisture and 107 temperature probes. Lots of extra cables.
 * 2019-08-17 Changed from 21x logger to a CR10x-PB
 * 2021-06-08 Ian Klupar changed the CR10x-PB logger since it stopped working during the winter.
