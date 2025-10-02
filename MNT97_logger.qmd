@@ -24,10 +24,11 @@ Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
 
 **Log of Changes**
 
-2004-06-04 Replaced CT Temperature RH probe.
-2005-06-12 Soil TC probe check. CT-E up 4 cm, NP w up 3 cm, GH e p 15 cm, GHW up 9 cm, others OK.
-2005-08-05 Soil TC probe check. CT E up 8\*, CT W up 3, NP E up 5 cm, NP E up 5, GH N up 6\*, GHS up 5, GHF E up 13\*, GHF W up 13\*. \* Reset to correct depth. Instead of a fiberglass pole, used a plastic flag stake to put TCs at the correct depths.\
-2006-06-10 Battery wire corroded. Data lost. Cleaned and repaired the wire. Repaired the NP TC wire where an animal chewed it. Reset time since it was off by 30 minutes. \
+2004-06-04 Replaced CT Temperature RH probe.\
+2005-06-12 Soil TC probe check. CT-E up 4 cm, NP w up 3 cm, GH e p 15 cm, GHW up 9 cm, others OK.\
+2005-08-05 Soil TC probe check. CT E up 8\*, CT W up 3, NP E up 5 cm, NP E up 5, GH N up 6\*, GHS up 5, GHF E up 13\*, GHF W up 13\*. \* Reset to correct depth. Instead of a fiberglass pole, I used a plastic flag stake to put TCs at the correct depths.\
+2006-06-10 Battery wire corroded. Data lost. Cleaned and repaired the wire. Repaired the NP TC wire where an animal chewed it. Reset the time since it was off by 30 minutes.\
+2006-08-15 Soil TC check. NP up 3 to 5 cm, CT1 up 2 cm; reset, GH up 2 cm, GHNP_40 cm up 5 to 7 cm, GHNP all others on flag stakes are OK.\
 2007-04-28 Downloaded the storage module. Wires were chewed, and the logger lost power. Restored connection, but greenhouse Temp/RH still not working.\
 2007-10-19 Added a subroutine to use Steinhart-Hart equation for reference temperature.\
 2008-06-08 Fixed GH Temp/RH sensor.\
@@ -36,6 +37,7 @@ Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
 2009-08-13 Looks like the GH temp/RH went out\
 2011-08-07 GH Temp/RH were reinstalled\
 2011-10-06 Took out the hour on the final storage for daily.\
+2012-08-16 Soil TC check GH on flag up 2 to 10 cm\
 2014-08-10 Added radio control since switched the radio to a Freeway FGR115 serial number 9178094. Added program signature and reference temperatures -both subroutine and P11 values\
 
 # Wiring Diagram
