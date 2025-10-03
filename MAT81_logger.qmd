@@ -7,17 +7,13 @@ format: dashboard
 # Documentation
 
 ::: card
-
-In 2015, CS 616 soil moisture and 107 temperature sensors were installed in Block 3 Control and NP plots, along the western long edge, approximately 1 meter into the plots at 10 and 20 cm depths. Air temperature and relative humidity at 3 meters are also measured. A Campbell Scientific CR1000 with an AM416 multiplexer is used to measure the sensors.  A FreeWave FGR-115RC, serial 9116010, radio modem provides wireless connectivity. 
+In 2015, CS 616 soil moisture and 107 temperature sensors were installed in Block 3 Control and NP plots, along the western long edge, approximately 1 meter into the plots at 10 and 20 cm depths. Air temperature and relative humidity at 3 meters are also measured. A Campbell Scientific CR1000 with an AM416 multiplexer is used to measure the sensors. A FreeWave FGR-115RC, serial 9116010, radio modem provides wireless connectivity.
 
 Nitrogen and phosphorus treatment was discontinued in 2015. These sensors were installed to monitor the post treatment phase.
 
 # Wiring Diagram
 
-CR1000 [PDF](other_sites/wiring_files/MAT81_Soilmo_temp_Jun2015ver-3_CR1000.pdf){target="_blank"}
-AM416 multiplexer [PDF](other_sites/wiring_files/MAT81_Soilmo_temp_Jun2015ver-3_AM416.pdf){target="_blank"}
-
-
+CR1000 [PDF](other_sites/wiring_files/MAT81_Soilmo_temp_Jun2015ver-3_CR1000.pdf){target="_blank"} AM416 multiplexer [PDF](other_sites/wiring_files/MAT81_Soilmo_temp_Jun2015ver-3_AM416.pdf){target="_blank"}
 :::
 
 # Air Temperature, RH, and Battery

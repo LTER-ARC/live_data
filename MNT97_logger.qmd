@@ -49,6 +49,6 @@ CR10x program with wiring notes [PDF](other_sites/wiring_files/MNT97_2014NACID_1
 
 **Note:** [**These data are provisional and have not been error-checked.**]{.underline} The weather station's time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are hourly or half-hourly averages. ![](other_sites/MNT97met.html){width="100%" height="800px"}
 
-# Soil Temperatures and Moistures
+# Soil Temperatures and Moisture
 
 **Note:** [**These data are provisional and have not been error-checked.**]{.underline} The weather station's time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are three hourly or averages. ![](other_sites/MNT97soil.html){width="100%" height="800px"}
