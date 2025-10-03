@@ -15,6 +15,10 @@ Recent data from the Arctic Long Term Experimental Research (LTER-ARC) experimen
 -   [Toolik Lake Inlet](/Toolik_lake_inlet.html)
 
 ::: column-margin
+Google Earth view of logger sites. ([kmz file download](documentation/Dataloggers_WGS84.kmz))
+
+[![Google Earth view of logger sites.](documentation/ARC logger sites.png){fig-alt="Google Earth map of logger sites" width="657"}](documentation/ARC logger sites.png)
+
 Visit the [Toolik Field Station Environmental Data Center](https://www.uaf.edu/toolik/edc/index.php "TFS Environmental Data Center") for monitoring data collected by the station.
 
 ![Toolik Webcam](https://lat68.toolik.alaska.edu/ajax/edc/resize_webcam_image.php?webcam=1&size=640x480){width="648"}

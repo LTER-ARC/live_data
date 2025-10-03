@@ -30,7 +30,7 @@ Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
 2006-06-10 Battery wire corroded. Data lost. Cleaned and repaired the wire. Repaired the NP TC wire where an animal chewed it. Reset the time since it was off by 30 minutes.\
 2006-08-15 Soil TC check. NP up 3 to 5 cm, CT1 up 2 cm; reset, GH up 2 cm, GHNP_40 cm up 5 to 7 cm, GHNP all others on flag stakes are OK.\
 2007-04-28 Downloaded the storage module. Wires were chewed, and the logger lost power. Restored connection, but greenhouse Temp/RH still not working.\
-2007-10-19 Added a subroutine to use Steinhart-Hart equation for reference temperature.\
+2007-10-19 Added a subroutine to use the Steinhart-Hart equation for reference temperature.\
 2008-06-08 Fixed GH Temp/RH sensor.\
 2009-06-11 Battery problem. The logger was only powered when the solar panel was providing power. Greenhouse temperature was -40; not sure why. Maybe start of Sic Sic nest in the battery box. Sic Sic made a nest in the battery box and chewed lots of wires.\
 2009-08-11 Repaired battery wire.\
