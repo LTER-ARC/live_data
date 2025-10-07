@@ -17,7 +17,7 @@ Recent data from the Arctic Long Term Experimental Research (LTER-ARC) experimen
 ::: column-margin
 Google Earth view of logger sites. ([kmz file download](documentation/Dataloggers_WGS84.kmz))
 
-[![Google Earth view of logger sites.](documentation/ARC logger sites.png){fig-alt="Google Earth map of logger sites" width="657"}](documentation/ARC logger sites.png)
+[![Click on the map for a larger image. ](documentation/ARC%20logger%20sites.png){fig-alt="Google Earth map of logger sites" width="657"}](documentation/ARC%20logger%20sites.png)
 
 Visit the [Toolik Field Station Environmental Data Center](https://www.uaf.edu/toolik/edc/index.php "TFS Environmental Data Center") for monitoring data collected by the station.
 
