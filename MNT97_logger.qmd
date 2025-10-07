@@ -11,6 +11,27 @@ format: dashboard
 
 Temperature and relative humidity are read every minute and averaged every hour, while the soil sensors are read every 15 minutes and averaged every 3 hours. The following label codes are used: CT = control, GH = greenhouses, NP = fertilized, GHF = greenhouse fertilized, plus a 1 or a 2 for the soil profile number. Note that the covers on greenhouses are removed every fall and reinstalled every spring.
 
+Plots were set up in July 1997. Three replicate blocks were established with the following annual treatments in 5 x 20 m plots: control (CT), nitrogen added (N), phosphorus added (P), and nitrogen combined with phosphorus (NP). The fertilized treatment rate was 10 g/m2 Nitrogen (as NH4NO3) and 5 g/m2 Phosphorus (as triple superphosphate). Two replicate blocks were established with a greenhouse treatment (GH) and a greenhouse fertilized treatment (GHNP).
+
+In 2012, the nitrogen was switched to 5 grams ammonium chlorite and 5 grams Sodium nitrate due to the unavailability of NH4NO3 fertilizer.
+
+In 2023, treatments were discontinued.
+
+**Sensor Description**:
+
+-   RELATIVE HUMIDITY/TEMPERATURE: Campbell Scientific, CS500 Temperature and Relative Humidity Probe. Uses PRT for temperature measurement; capacitive RH chip for RH. Accuracy is ±3% over 10-90% RH; ±6% over 90-100% RH. Manufactured by Vaisala, Inc.
+
+-   THERMOCOUPLES: Omega Engineering, Copper-Constantan wire. Range -200 to 350 °C. Limits of error: Standard wire 1.0°C or 0.75% above 0°C and 1.0°C or 1.5% below 0°C. Special wire 0.5°C or 0.4%.
+
+**List of manufacturers and suppliers.**
+
+Campbell Scientific, Inc. 81 W. 1800 N. Logan, Utah 84321-1784 (435)750-1739\
+Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
+
+**Initial setup**: On August 17, 1999, a Campbell CR10x data logger with an AM416 multiplexer was installed in the LTER Toolik Moist Non-acidic Tussock Experimental plots (MNT97) block 2 to monitor air temperature and relative humidity in the control and greenhouse control (added June 15, 2000) and soil temperatures. Soil temperatures are measured with two profiles of copper/constantan thermocouple wires (TC) per treatment plot, installed at depths of 0, 10, 20, and 40 cm in inter-tussock areas.
+
+Temperature and relative humidity are read every minute and averaged every hour, while the soil sensors are read every 15 minutes and averaged every 3 hours. The following label codes are used: CT = control, GH = greenhouses, NP = fertilized, GHF = greenhouse fertilized, plus a 1 or a 2 for the soil profile number. Note that the covers on greenhouses are removed every fall and reinstalled every spring.
+
 **Sensor Description**:
 
 -   RELATIVE HUMIDITY/TEMPERATURE: Campbell Scientific, CS500 Temperature and Relative Humidity Probe. Uses PRT for temperature measurement; capacitive RH chip for RH. Accuracy is ±3% over 10-90% RH; ±6% over 90-100% RH. Manufactured by Vaisala, Inc.
