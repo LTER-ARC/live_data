@@ -17,6 +17,10 @@ In 2012, the nitrogen was switched to 5 grams ammonium chlorite and 5 grams Sodi
 
 In 2023, treatments were discontinued.
 
+Data are available:
+
+-   Laundre, J. and S. Hobbie. 2025. Air temperature and humidity, and soil temperature data from the Arctic LTER Moist Non-acidic Tussock Experimental plots (MNT97), Toolik Lake Field Station, Alaska, 1999-2025. ver 6. Environmental Data Initiative. https://doi.org/10.6073/pasta/13c5a041bf90c60da060d08b3c5eb07b.
+
 **Sensor Description**:
 
 -   RELATIVE HUMIDITY/TEMPERATURE: Campbell Scientific, CS500 Temperature and Relative Humidity Probe. Uses PRT for temperature measurement; capacitive RH chip for RH. Accuracy is ±3% over 10-90% RH; ±6% over 90-100% RH. Manufactured by Vaisala, Inc.

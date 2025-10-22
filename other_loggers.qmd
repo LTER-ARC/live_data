@@ -40,5 +40,4 @@ Other experimental plots with loggers.
 # Imnavait Solar Radiation Station
 
 ![](other_sites/images/Imnavait_SolarRadiationStation.jpg){fig-align="left" width="80"} [Recent data plots.](Imnav_Solar_rad_logger.qmd)
-
 :::
