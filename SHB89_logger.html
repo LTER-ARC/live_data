@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
         
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-documentation" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#documentation" data-scrolling="false" href="#documentation" aria-controls="documentation" aria-selected="true"><span class="nav-link-text">Documentation</span></a></li><li class="nav-item" role="presentation"><a id="tab-air-temperature-rh-and-battery" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#air-temperature-rh-and-battery" data-scrolling="false" href="#air-temperature-rh-and-battery" aria-controls="air-temperature-rh-and-battery" aria-selected="false"><span class="nav-link-text">Air Temperature, RH, and Battery</span></a></li><li class="nav-item" role="presentation"><a id="tab-soil-temperatures-and-moistures" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#soil-temperatures-and-moistures" data-scrolling="false" href="#soil-temperatures-and-moistures" aria-controls="soil-temperatures-and-moistures" aria-selected="false"><span class="nav-link-text">Soil Temperatures and Moistures</span></a></li></ul></div></div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-documentation" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#documentation" data-scrolling="false" href="#documentation" aria-controls="documentation" aria-selected="true"><span class="nav-link-text">Documentation</span></a></li><li class="nav-item" role="presentation"><a id="tab-wiring-diagram" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#wiring-diagram" data-scrolling="false" href="#wiring-diagram" aria-controls="wiring-diagram" aria-selected="false"><span class="nav-link-text">Wiring Diagram</span></a></li><li class="nav-item" role="presentation"><a id="tab-air-temperature-rh-and-battery" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#air-temperature-rh-and-battery" data-scrolling="false" href="#air-temperature-rh-and-battery" aria-controls="air-temperature-rh-and-battery" aria-selected="false"><span class="nav-link-text">Air Temperature, RH, and Battery</span></a></li><li class="nav-item" role="presentation"><a id="tab-soil-temperatures-and-moisture" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#soil-temperatures-and-moisture" data-scrolling="false" href="#soil-temperatures-and-moisture" aria-controls="soil-temperatures-and-moisture" aria-selected="false"><span class="nav-link-text">Soil Temperatures and Moisture</span></a></li></ul></div></div>
 </nav>
 </header></header>
 <!-- content -->
@@ -161,26 +161,70 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
 <div id="documentation" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-documentation">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, 1fr) minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<strong>Initial setup.</strong>
+<p>Experiment plots were set up in 1989 in a randomized block design (5-meter by 10-meter plots) with the following treatments:</p>
+<p>CT - Control untreated plot. NP - 10 gm N per meter squared of 34 - 0 - 0 nitrogen fertilizer (34% ammonium nitrate ) plus 5 P gm per meter squared of 0 - 45 - 0 fertilizer (45% P as P2O5). N - 10 gm N per meter squared of 34 - 0 - 0 nitrogen fertilizer (34% ammonium nitrate ) only. P - 5 P gm per meter squared of 0 - 45 - 0 fertilizer (45% P as P2O5)only. GH - Warming treatment using a simple 2.4 m x 4.9 m wood frame covered by commercial greenhouse plastic. GHNP - Warming with NP treatment. SH - Shading experiment using a 2.4 m x 4.9 m wood frame covered by 50% shade cloth.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 <div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<strong>Initial setup</strong>
-<p>FreeWave radio FGR115 9178140</p>
-<p><strong>Equipment Description</strong>:</p>
-<p><strong>List of manufacturers and suppliers.</strong> Campbell Scientific, Inc.&nbsp;81 W. 1800 N. Logan, Utah 84321-1784 (435)750-1739 Omega Engineering, Inc.&nbsp;P.O. Box 4047 Stamford, CT 06907-0047 (800)826-6342</p>
 <strong>Log of Changes</strong>
-<p>2007-08-10 Added an if statement to correct reference temperatures below -28 with a polynomial. Also changed output to add the year.<br>
-2009-06-09 Put the Trime back on.<br>
-2009-08-09 Added 109 sensor for air temperature. Moved the soil temperature statements to table 2 and the 109 using the Steinhart-Hart equation. Note that two subroutines are needed since the 109 and 107 have different thermistors. Added control port 6 control on powering the Trime soil moisture sensor. It should be off during the winter.<br>
-</p>
-<p>2014-08-09 Using CR1000 serial number 43615 Calibration. GH2 AND GHF2 are switched. correcting the program.</p>
-<p>NOTES: Soil temps in the LTER Shrub site treatment plots using an AM416 multiplexer; 2 strings per treatment with sur, 10, 20, 40, and 5 and 100 cm in cts. ; CT, NP, GH, GHF in block 2.</p>
-<div class="h4">
-Wiring
-
-Diagram
+<p><strong>1998-08-14</strong>, a CR10 logger, serial no. 16942, with an AM416 multiplier was set up in block 2 to measure soil temperatures using custom type T thermocouples.</p>
+<p>Two profiles of soil temperature are measured per treatment plot with custom copper/constantin thermocouple wires (TC) installed at depths of ~ 1 (labeled moss), 10, 20, and 40. The following label codes are used: CT = control, GH = greenhouses, SH = shade houses, NP = fertilized, GHNP = greenhouse fertilized, plus a 1 or a 2 for the profile number. All soil sensors are read every 15 minutes and averaged every 3 hours. In CT, there are additional depths of 5 and 100 cm</p>
+<p><strong>2001-06-19</strong> Soil moisture probes were installed in an untreated area approximately 2 meters from the data logger using Campbell Scientific CS615s and a Trime -EZ TDR probe placed ~ 5-10 cm in the organic layer. The Trime was problematic since it draws a significant wattage. It is programmed to switch off during the winter. For the CS615 probes, a correction is applied based on a calibration curve developed from comparing the probe readings to the field gravimetric. The equation y = 0.60x + 7.68 has an R² of 0.86 (where y is the corrected value and x is the sensor value in % volume H₂O to volume of soil, i.e., meter cubed water per meter cubed soil, multiplied by 100).<br>
+The Trime-EZ output is volts, which is then converted using the calibration equation of y =<em>0.1</em>2.022*x-1.396 (where y is the corrected value and x is the sensor value in volts).</p>
+<p><strong>2007-08-10</strong> Added an if statement to correct reference temperatures below -28 °C with a polynomial derived from the resistance and temperature data table using only the temperatures below -28 °C. See Campbell Sci. 107 manual. Changed output to include year.<br>
+<strong>2009-06-09</strong> Put the Trime back on.<br>
+<strong>2009-08-09</strong> Added 109 sensor for air temperature. Moved the soil temperature statements to table 2 and the 109 using the Steinhart-Hart equation. Note that two subroutines are needed since the 109 and 107 have different thermistors. Added control port 6 control on powering the Trime soil moisture sensor. It should be off during the winter.</p>
+<p><strong>2013-06-13</strong>. Added CR1000 (serial no. 33711) with HMP50 temperature/Rh sensor and LiCor LI-190 quantum sensors to measure temperature and PAR in GH, SH, and CT.</p>
+<p><strong>2013-08-10</strong>. Added in BF3 PAR and diffuse PAR sensor. Disconnected the T109 since adding BF3 left no room.</p>
+<p><strong>2014-08-09</strong> Took out CR10x logger and now just using a CR1000 serial number 43615. Two AM25T measure Soil TC, and an AM416 measures soil moisture.<br>
+GH2 AND GHF2 temperature profiles were switched, correcting the program and in Excel files.</p>
 </div>
-<p>CR1000 program with wiring notes <a href="other_sites/wiring_files/SHB89_2014_Soil_PAR-Temp_2020.pdf" target="_blank">PDF</a></p>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p><strong>Equipment Description</strong>:</p>
+<strong>List of manufacturers and suppliers.</strong>
+<p>Campbell Scientific Inc.&nbsp;81 W. 1800 N. Logan, Utah 84321-1784 (435)750-1739<br>
+Data Loggers CR10, CR10x, and CR1000.<br>
+Air temperature 109<br>
+Air temperature and relative humidity HMP50<br>
+Soil moisture CS615.</p>
+<p>LiCor 4647 Superior Street PO Box 4425 Lincoln, NE 68504<br>
+PAR LI-190SB</p>
+<p>Dynamax Inc 10808 Fallstone Suite #350 Houston, Texas 77099<br>
+BF3 Sunshine sensor</p>
+<p>Omega Engineering, Copper-Constantan thermocouple wire. Range -200 to 350 °C. Limits of error: Standard wire 1.0°C or 0.75% above 0°C and 1.0°C or 1.5% below 0°C. Special wire 0.5°C or 0.4%. Omega Engineering, Inc.&nbsp;P.O. Box 4047 Stamford, CT 06907-0047 (800)826-6342</p>
+<p>IMKO Trime-EZ moisture probe with integrated TDR electronics. Rod length of 160 mm. US distributor: MESA Systems Co., 20 Cove Road, Unit 1, Stonington, CT, 06378, USA.</p>
+<p>FreeWave radio FGR115 9178140</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div id="wiring-diagram" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-wiring-diagram">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p>CR1000 program with wiring notes <a href="other_sites/wiring_files/SHB89_2014_Soil_PAR-Temp_2020.pdf" target="_blank">PDF</a>.</p>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
@@ -204,11 +248,11 @@ Diagram
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 </div>
-<div id="soil-temperatures-and-moistures" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-soil-temperatures-and-moistures">
+<div id="soil-temperatures-and-moisture" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-soil-temperatures-and-moisture">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
 <div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<p><strong>Note:</strong> <u><strong>These data are provisional and have not been error-checked.</strong></u> The weather station’s time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are three hourly or averages. <embed src="other_sites/SHB89soil.html" style="width:100.0%" height="800"></p>
+<p><strong>Note:</strong> <u><strong>These data are provisional and have not been error-checked.</strong></u> The weather station’s time is set to Alaska Standard Time and is not adjusted for Daylight Saving Time. Data are three-hourly or averages. <embed src="other_sites/SHB89soil.html" style="width:100.0%" height="800"></p>
 <hr>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
