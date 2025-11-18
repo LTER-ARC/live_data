@@ -65,10 +65,68 @@ Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
 2012-08-16 Soil TC check GH on flag up 2 to 10 cm\
 2014-08-10 Added radio control since switched the radio to a Freeway FGR115 serial number 9178094. Added program signature and reference temperatures -both subroutine and P11 values\
 
+## Current Tables
+
+### Hourly table
+
+| Variable | Definition | Units |
+|----------------|----------------------------------------|----------------|
+| timestamp | Date and Time - Alaska standard time 2400 format | YYYY-MM-DD hh:mm |
+| ct_air_temp | Control temperature at 3 meters | celsius |
+| gh_air_temp | Control Greenhouse temperature | celsius |
+| ct_rh | Control Relative Humidity at 3 meters % | percent |
+| gh_rh | Control Greenhouse Relative Humidity | percent |
+| vapor_pres_3m | Vapor pressure for Control temperature/relative humidity at 3 meters. <br />Formula:<br />If Air Temp \> 0 then (GH RH/100) \* 6.1121 \* exp(17.368 \* GH Air Temp(238.88 + GH Air Temp)) <br />If Air Temp \< 0 then (GH RH/100) \* 6.1121 \* exp(17.966 \* GH Air Temp/(238.88 + GH Air Temp)) (Buck 1981). | millibar |
+| comments | Comments about individual datum points. | text |
+
+### **Three-hour table**
+
+| **Variable** | **Definition** | **Units** |
+|----|----|----|
+| timestamp | Date and time of data collection. Sensors are read every 15 minitues and averaged every 3 hours. | YYYY-MM-DD hh:mm |
+| np1_sur | Profile 1 NP soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate. | celsius |
+| np1_1 | Profile 1 NP soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm. | celsius |
+| np1_2 | Profile 1 NP soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm. | celsius |
+| np1_3 | Profile 1 NP soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm. | celsius |
+| np2_sur | Profile 2 NP soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate. | celsius |
+| np2_1 | Profile 2 NP soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm. | celsius |
+| np2_2 | Profile 2 NP soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm. | celsius |
+| np2_3 | Profile 2 NP soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm. | celsius |
+| ct1_sur | Profile 1 Control soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate. | celsius |
+| ct1_1 | Profile 1 Control soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm. | celsius |
+| ct1_2 | Profile 1 Control soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm. | celsius |
+| ct1_3 | Profile 1 Control soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm. | celsius |
+| ct2_sur | Profile 2 Control soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate. | celsius |
+| ct2_1 | Profile 2 Control soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm. | celsius |
+| ct2_2 | Profile 2 Control soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm. | celsius |
+| ct2_3 | Profile 2 Control soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm. | celsius |
+| gh1_sur | Profile 1 Greenhouse soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate. | celsius |
+| gh1_1 | Profile 1 Greenhouse soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm. | celsius |
+| gh1_2 | Profile 1 Greenhouse soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm. | celsius |
+| gh1_3 | Profile 1 Greenhouse soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm. | celsius |
+| gh2_sur | Profile 2 Greenhouse soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate. | celsius |
+| gh2_1 | Profile 2 Greenhouse soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm. | celsius |
+| gh2_2 | Profile 2 Greenhouse soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm. | celsius |
+| gh2_3 | Profile 2 Greenhouse soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm. | celsius |
+| ghf1_sur | Profile 1 Greenhouse NP soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate. | celsius |
+| ghf1_1 | Profile 1 Greenhouse NP soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm. | celsius |
+| ghf1_2 | Profile 1 Greenhouse NP soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm. | celsius |
+| ghf1_3 | Profile 1 Greenhouse NP soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm. | celsius |
+| ghf2_sur | Profile 2 Greenhouse NP soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate. | celsius |
+| ghf2_1 | Profile 2 Greenhouse NP soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm. | celsius |
+| ghf2_2 | Profile 2 Greenhouse NP soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm. | celsius |
+| ghf2_3 | Profile 2 Greenhouse NP soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm. | celsius |
+| battery | Logger battery voltage | volt |
+| comments | Comments about individual data points. | text |
+
 # Wiring Diagram
 
 CR10x program with wiring notes [PDF](other_sites/wiring_files/MNT97_2014NACID_10AUG14_.pdf){target="_blank"}
 :::
+
+# Online data: 
+
+<https://doi.org/10.6073/pasta/13c5a041bf90c60da060d08b3c5eb07b>
 
 # Air Temperature, RH, and Battery
 
