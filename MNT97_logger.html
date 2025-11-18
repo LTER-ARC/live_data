@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
         
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-documentation" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#documentation" data-scrolling="false" href="#documentation" aria-controls="documentation" aria-selected="true"><span class="nav-link-text">Documentation</span></a></li><li class="nav-item" role="presentation"><a id="tab-air-temperature-rh-and-battery" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#air-temperature-rh-and-battery" data-scrolling="false" href="#air-temperature-rh-and-battery" aria-controls="air-temperature-rh-and-battery" aria-selected="false"><span class="nav-link-text">Air Temperature, RH, and Battery</span></a></li><li class="nav-item" role="presentation"><a id="tab-soil-temperatures-and-moisture" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#soil-temperatures-and-moisture" data-scrolling="false" href="#soil-temperatures-and-moisture" aria-controls="soil-temperatures-and-moisture" aria-selected="false"><span class="nav-link-text">Soil Temperatures and Moisture</span></a></li></ul></div></div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-documentation" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#documentation" data-scrolling="false" href="#documentation" aria-controls="documentation" aria-selected="true"><span class="nav-link-text">Documentation</span></a></li><li class="nav-item" role="presentation"><a id="tab-online-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#online-data" data-scrolling="false" href="#online-data" aria-controls="online-data" aria-selected="false"><span class="nav-link-text">Online data:</span></a></li><li class="nav-item" role="presentation"><a id="tab-air-temperature-rh-and-battery" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#air-temperature-rh-and-battery" data-scrolling="false" href="#air-temperature-rh-and-battery" aria-controls="air-temperature-rh-and-battery" aria-selected="false"><span class="nav-link-text">Air Temperature, RH, and Battery</span></a></li><li class="nav-item" role="presentation"><a id="tab-soil-temperatures-and-moisture" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#soil-temperatures-and-moisture" data-scrolling="false" href="#soil-temperatures-and-moisture" aria-controls="soil-temperatures-and-moisture" aria-selected="false"><span class="nav-link-text">Soil Temperatures and Moisture</span></a></li></ul></div></div>
 </nav>
 </header></header>
 <!-- content -->
@@ -206,12 +206,281 @@ Omega Engineering, Inc.&nbsp;P.O. Box 4047, Stamford, CT 06907-0047 (800)826-634
 2012-08-16 Soil TC check GH on flag up 2 to 10 cm<br>
 2014-08-10 Added radio control since switched the radio to a Freeway FGR115 serial number 9178094. Added program signature and reference temperatures -both subroutine and P11 values<br>
 </p>
+<div class="h5">
+Current
+
+Tables
+</div>
+<div class="h6">
+Hourly
+
+table
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 55%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Definition</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>timestamp</td>
+<td>Date and Time - Alaska standard time 2400 format</td>
+<td>YYYY-MM-DD hh:mm</td>
+</tr>
+<tr class="even">
+<td>ct_air_temp</td>
+<td>Control temperature at 3 meters</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>gh_air_temp</td>
+<td>Control Greenhouse temperature</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>ct_rh</td>
+<td>Control Relative Humidity at 3 meters %</td>
+<td>percent</td>
+</tr>
+<tr class="odd">
+<td>gh_rh</td>
+<td>Control Greenhouse Relative Humidity</td>
+<td>percent</td>
+</tr>
+<tr class="even">
+<td>vapor_pres_3m</td>
+<td>Vapor pressure for Control temperature/relative humidity at 3 meters. <br>Formula:<br>If Air Temp &gt; 0 then (GH RH/100) * 6.1121 * exp(17.368 * GH Air Temp(238.88 + GH Air Temp)) <br>If Air Temp &lt; 0 then (GH RH/100) * 6.1121 * exp(17.966 * GH Air Temp/(238.88 + GH Air Temp)) (Buck 1981).</td>
+<td>millibar</td>
+</tr>
+<tr class="odd">
+<td>comments</td>
+<td>Comments about individual datum points.</td>
+<td>text</td>
+</tr>
+</tbody>
+</table>
+<div class="h6">
+<strong>Three-hour table</strong>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Variable</strong></th>
+<th><strong>Definition</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>timestamp</td>
+<td>Date and time of data collection. Sensors are read every 15 minitues and averaged every 3 hours.</td>
+<td>YYYY-MM-DD hh:mm</td>
+</tr>
+<tr class="even">
+<td>np1_sur</td>
+<td>Profile 1 NP soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>np1_1</td>
+<td>Profile 1 NP soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>np1_2</td>
+<td>Profile 1 NP soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>np1_3</td>
+<td>Profile 1 NP soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>np2_sur</td>
+<td>Profile 2 NP soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>np2_1</td>
+<td>Profile 2 NP soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>np2_2</td>
+<td>Profile 2 NP soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>np2_3</td>
+<td>Profile 2 NP soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>ct1_sur</td>
+<td>Profile 1 Control soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>ct1_1</td>
+<td>Profile 1 Control soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>ct1_2</td>
+<td>Profile 1 Control soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>ct1_3</td>
+<td>Profile 1 Control soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>ct2_sur</td>
+<td>Profile 2 Control soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>ct2_1</td>
+<td>Profile 2 Control soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>ct2_2</td>
+<td>Profile 2 Control soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>ct2_3</td>
+<td>Profile 2 Control soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>gh1_sur</td>
+<td>Profile 1 Greenhouse soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>gh1_1</td>
+<td>Profile 1 Greenhouse soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>gh1_2</td>
+<td>Profile 1 Greenhouse soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>gh1_3</td>
+<td>Profile 1 Greenhouse soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>gh2_sur</td>
+<td>Profile 2 Greenhouse soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>gh2_1</td>
+<td>Profile 2 Greenhouse soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>gh2_2</td>
+<td>Profile 2 Greenhouse soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>gh2_3</td>
+<td>Profile 2 Greenhouse soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>ghf1_sur</td>
+<td>Profile 1 Greenhouse NP soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>ghf1_1</td>
+<td>Profile 1 Greenhouse NP soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>ghf1_2</td>
+<td>Profile 1 Greenhouse NP soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>ghf1_3</td>
+<td>Profile 1 Greenhouse NP soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>ghf2_sur</td>
+<td>Profile 2 Greenhouse NP soil temperature in the moss layer at about 1-2 cm depth. Depth will vary with time as the moss and litter grow or accumulate.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>ghf2_1</td>
+<td>Profile 2 Greenhouse NP soil temperature at approximately 10 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 10 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>ghf2_2</td>
+<td>Profile 2 Greenhouse NP soil temperature at approximately 20 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 20 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>ghf2_3</td>
+<td>Profile 2 Greenhouse NP soil temperature at approximately 40 cm +- 3 cm. Depth varies with frost heaving. Periodically checked and reset to 40 cm.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>battery</td>
+<td>Logger battery voltage</td>
+<td>volt</td>
+</tr>
+<tr class="odd">
+<td>comments</td>
+<td>Comments about individual data points.</td>
+<td>text</td>
+</tr>
+</tbody>
+</table>
 <div class="h4">
 Wiring
 
 Diagram
 </div>
 <p>CR10x program with wiring notes <a href="other_sites/wiring_files/MNT97_2014NACID_10AUG14_.pdf" target="_blank">PDF</a></p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div id="online-data" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-online-data">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<a href="https://doi.org/10.6073/pasta/13c5a041bf90c60da060d08b3c5eb07b" class="uri">https://doi.org/10.6073/pasta/13c5a041bf90c60da060d08b3c5eb07b</a>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
