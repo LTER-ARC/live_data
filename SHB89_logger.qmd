@@ -6,16 +6,16 @@ format: dashboard
 
 # Documentation
 
+::: card
 **Initial setup.**
 
 Experiment plots were set up in 1989 in a randomized block design (5-meter by 10-meter plots) with the following treatments:
 
 CT - Control untreated plot. NP - 10 gm N per meter squared of 34 - 0 - 0 nitrogen fertilizer (34% ammonium nitrate ) plus 5 P gm per meter squared of 0 - 45 - 0 fertilizer (45% P as P2O5). N - 10 gm N per meter squared of 34 - 0 - 0 nitrogen fertilizer (34% ammonium nitrate ) only. P - 5 P gm per meter squared of 0 - 45 - 0 fertilizer (45% P as P2O5)only. GH - Warming treatment using a simple 2.4 m x 4.9 m wood frame covered by commercial greenhouse plastic. GHNP - Warming with NP treatment. SH - Shading experiment using a 2.4 m x 4.9 m wood frame covered by 50% shade cloth.
 
-::: card
 **Log of Changes**
 
-**1998-08-14**, a CR10 logger, serial no. 16942, with an AM416 multiplier was set up in block 2 to measure soil temperatures using custom type T thermocouples.
+**1998-08-14**, a CR10 logger, serial no. 16942, with an AM416 multiplier, was set up in block 2 to measure soil temperatures using custom type T thermocouples.
 
 Two profiles of soil temperature are measured per treatment plot with custom copper/constantin thermocouple wires (TC) installed at depths of \~ 1 (labeled moss), 10, 20, and 40. The following label codes are used: CT = control, GH = greenhouses, SH = shade houses, NP = fertilized, GHNP = greenhouse fertilized, plus a 1 or a 2 for the profile number. All soil sensors are read every 15 minutes and averaged every 3 hours. In CT, there are additional depths of 5 and 100 cm
 
@@ -32,7 +32,6 @@ The Trime-EZ output is volts, which is then converted using the calibration equa
 
 **2014-08-09** Took out CR10x logger and now just using a CR1000 serial number 43615. Two AM25T measure Soil TC, and an AM416 measures soil moisture.\
 GH2 AND GHF2 temperature profiles were switched, correcting the program and in Excel files.
-:::
 
 **Equipment Description**:
 
@@ -56,9 +55,67 @@ IMKO Trime-EZ moisture probe with integrated TDR electronics. Rod length of 160 
 
 FreeWave radio FGR115 9178140
 
+## Current Table
+
+### **Hourly Table**
+
+| **Variable** | **Definition** | **Units** |
+|----|----|----|
+| timestamp | Date and Time Alaska standard time | Date and Time - Alaska standard time 2400 format |
+| AirTC_3M_Avg | Control temperature at 3 meters | celsius |
+| RH_3Meter | Relative humidity at 3 meters | percent |
+| GH_AirTC_Avg | Control Greenhouse temperature | celsius |
+| GH_RH | Relative humidity in the greenhouse at about 1 meter | percent |
+| SH_AirTC_Avg | Shade Temperature | celsius |
+| SH_RH | Relative humidity in the shade house at about 1 meter | percent |
+| T109_3M_Avg | A Campbell Scientific 109 sensor was installed in the same shield as the CS500 temperature/RH sensor. It will record temperatures below -39 °C and is used to fill the 3-meter CS500 when temperatures drop below -39 °C. | celsius |
+| CT_PAR_Den_Avg | Control photosynthetic active radiation (PAR) LiCor LI-190SB | umol/s/m\^2 |
+| GH_PAR_Den_Avg | Greenhouse photosynthetic active radiation (PAR) LiCor LI-190SB | umol/s/m\^2 |
+| SH_PAR_Den_Avg | Shade photosynthetic active radiation (PAR) LiCor LI-190SB | umol/s/m\^2 |
+| BF3_Direct_PAR_Avg | Dynamax BF3 sunshine sensor direct photosynthetic active radiation (PAR) | umol/m2/s |
+| BF3_Diffuse_PAR_Avg | Dynamax BF3 sunshine sensor diffuse photosynthetic active radiation (PAR) | umol/m2/s |
+| NP1 Moss | Moss temperature of NP plot. Profile 1. | celsius |
+| NP1 10cm | 10 cm depth soil temperature of NP plot. Profile 1. | celsius |
+| NP1 20cm | 20 cm depth soil temperature of NP plot. Profile 1. | celsius |
+| NP1 40cm | 40 cm depth soil temperature of NP plot. Profile 1. | celsius |
+| NP2 moss | Moss temperature of NP plot. Profile 2. | celsius |
+| NP2 10cm | 10 cm depth soil temperature of NP plot. Profile 2. | celsius |
+| NP2 20cm | 20 cm depth soil temperature of NP plot. Profile 2. | celsius |
+| NP2 40cm | 40 cm depth soil temperature of NP plot. Profile 2. | celsius |
+| CT1 moss | Moss temperature of control plot. Profile 1. | celsius |
+| CT1 100cm | 100 cm depth soil temperature of control plot. Profile 1. | celsius |
+| CT1 10cm | 10 cm depth soil temperature of control plot. Profile 1. | celsius |
+| CT1 20cm | 20 cm depth soil temperature of control plot. Profile 1. | celsius |
+| CT1 40cm | 40 cm depth soil temperature of control plot. Profile 1. | celsius |
+| CT1 5cm | 5 cm depth soil temperature of control plot. Profile 1. | celsius |
+| CT2 moss | Moss temperature of control plot. Profile 2. | celsius |
+| CT2 5cm | 5 cm depth soil temperature of control plot. Profile 2. | celsius |
+| CT2 10cm | 10 cm depth soil temperature of control plot. Profile 2. | celsius |
+| CT2 20cm | 20 cm depth soil temperature of control plot. Profile 2. | celsius |
+| CT2 40cm | 40 cm depth soil temperature of control plot. Profile 2. | celsius |
+| CT2 100cm | 100 cm depth soil temperature of control plot. Profile 2. | celsius |
+| GH1 Moss | Moss temperature of greenhouse plot. Profile 1. | celsius |
+| GH1 10cm | 10 cm depth soil temperature of greenhouse plot. Profile 1. | celsius |
+| GH1 20cm | 20 cm depth soil temperature of greenhouse plot. Profile 1. | celsius |
+| GH1 40cm | 40 cm depth soil temperature of greenhouse plot. Profile 1. | celsius |
+| GH2 10cm | 10 cm depth soil temperature of greenhouse plot. Profile 2. | celsius |
+| GH2 moss | Moss temperature of greenhouse plot. Profile 2. | celsius |
+| GH2 20cm | 20 cm depth soil temperature of greenhouse plot. Profile 2. | celsius |
+| GH2 40cm | 40 cm depth soil temperature of greenhouse plot. Profile 2. | celsius |
+| GHF1 10cm | 10 cm depth soil temperature of greenhouse fertilizer plot. Profile 1. | celsius |
+| GHF1 20cm | 20 cm depth soil temperature of greenhouse fertilizer plot. Profile 1. | celsius |
+| GHF1 moss | Moss temperature of greenhouse fertilizer plot. Profile 1. | celsius |
+| GHF1 40cm | 40 cm depth soil temperature of greenhouse fertilizer plot. Profile 1. | celsius |
+| GHF2 10cm | 10 cm depth soil temperature of greenhouse fertilizer plot. Profile 2. | celsius |
+| GHF2 moss | Moss temperature of greenhouse fertilizer plot. Profile 2. | celsius |
+| GHF2 20cm | 20 cm depth soil temperature of greenhouse fertilizer plot. Profile 2. | celsius |
+| GHF2 40cm | 40 cm depth soil temperature of greenhouse fertilizer plot. Profile 2. | celsius |
+| Battery | Battery voltage of data logger | volt |
+
 # Wiring Diagram
 
 CR1000 program with wiring notes [PDF](other_sites/wiring_files/SHB89_2014_Soil_PAR-Temp_2020.pdf){target="_blank"}.
+:::
 
 # Air Temperature, RH, and Battery
 
