@@ -28,19 +28,19 @@ Occasional erratic soil temperature values occur when the air temperature is bel
 
 **Log of Changes**
 
-During the winter of 1994-1995, a program error caused the data from 20Aug94 to 28Mar95 to be lost. Data was also lost during winter 1995-1996. \
+During the winter of 1994-1995, a program error caused the data from 20Aug94 to 28Mar95 to be lost. Data was also lost during winter 1995-1996.\
 1996 - Relative humidity is low, never reaching above 90%. Data were not corrected. RH sensor replaced summer of 1996.\
-1999 18 Aug Changed out the 207 temp/RH sensor, replacing it with a CS500. Since the CS500 only goes to -39 °C, the 207 is used to measure the temperatures below -40 °C and as a backup. Note that the 207 measurement error below -40 °C is large. See Campbell's manual on the 207/107. The 207 was discontinued since the RH sensor is no longer available. \
-2001 Added a subroutine to calculate the reference and air 107 temperature probes using a Steinhart-Hart equation: The voltage of a 107 probe is converted to resistance then converted to both Kelvin and Celsius using 1/T= A + B ln Rs + C(lnRs)\^3 where T = Kelvin and A, B, and C are constants derived from the temperature vs resistance data of the Fenwell thermistors. Rs is the measured resistance. This will improve the accuracy of temperatures below -30–30C. The station lost power. Using a regression with Toolik Field Station Air 5 meters to estimate the CT Air Temp \
-2000 Station lost power from 2000-08-19 13:00 to 2000-08-22 16:00. Using a regression with Toolik Field Station Air 5 meters to estimate the "CT Air Temp". \
-2002 The control relative humidity sensor stopped working. Not sure why. \
-2003 The data logger stopped collecting data from Feb through May. The temperature and RH sensors failed from May to August due to a faulty splice in the cable. The 3 meter temperature was not replaced until June 2004 \
-2004 The 3 meter temperature/RH probe replace June with the same model - CS500 \
-2011 Lost power from 4Aug to 6Aug caused by a corroded battery wire. 2012 Replace 207 with a 107 Thermistor. The old 207 cable was cracking. The 107 is in the same shield as the CS500. \
-2014-03-21 Changed soil output to every hour with reads every 120 sec. Seeing if this will give smoother temperature values. Jim L \
-2015 Jan added panel temperature average to output. Trying to see if this is causing jumpy soil temps. Jim L \
-2015 May Corrected the coefficients on the Steinhart equation. The thermistor is a newer one (Belatherm 100k6A). Jim L \
-2015 Aug Redid the subroutine for calculating the Steinhart Hart equation based on the Campbells Scientific's 109 manual. Using a half bridge to read the 107 See notes in Sub 3 Changed the soil to 3 hour averages. Jim L \
+1999 18 Aug Changed out the 207 temp/RH sensor, replacing it with a CS500. Since the CS500 only goes to -39 °C, the 207 is used to measure the temperatures below -40 °C and as a backup. Note that the 207 measurement error below -40 °C is large. See Campbell's manual on the 207/107. The 207 was discontinued since the RH sensor is no longer available.\
+2001 Added a subroutine to calculate the reference and air 107 temperature probes using a Steinhart-Hart equation: The voltage of a 107 probe is converted to resistance then converted to both Kelvin and Celsius using 1/T= A + B ln Rs + C(lnRs)\^3 where T = Kelvin and A, B, and C are constants derived from the temperature vs resistance data of the Fenwell thermistors. Rs is the measured resistance. This will improve the accuracy of temperatures below -30–30C. The station lost power. Using a regression with Toolik Field Station Air 5 meters to estimate the CT Air Temp\
+2000 Station lost power from 2000-08-19 13:00 to 2000-08-22 16:00. Using a regression with Toolik Field Station Air 5 meters to estimate the "CT Air Temp".\
+2002 The control relative humidity sensor stopped working. Not sure why.\
+2003 The data logger stopped collecting data from Feb through May. The temperature and RH sensors failed from May to August due to a faulty splice in the cable. The 3 meter temperature was not replaced until June 2004\
+2004 The 3 meter temperature/RH probe replace June with the same model - CS500\
+2011 Lost power from 4Aug to 6Aug caused by a corroded battery wire. 2012 Replace 207 with a 107 Thermistor. The old 207 cable was cracking. The 107 is in the same shield as the CS500.\
+2014-03-21 Changed soil output to every hour with reads every 120 sec. Seeing if this will give smoother temperature values. Jim L\
+2015 Jan added panel temperature average to output. Trying to see if this is causing jumpy soil temps. Jim L\
+2015 May Corrected the coefficients on the Steinhart equation. The thermistor is a newer one (Belatherm 100k6A). Jim L\
+2015 Aug Redid the subroutine for calculating the Steinhart Hart equation based on the Campbells Scientific's 109 manual. Using a half bridge to read the 107 See notes in Sub 3 Changed the soil to 3 hour averages. Jim L\
 2019 Aug Changed logger to a CR23XPB. It now usees the PakBus radio Network and will have room for more soil temperature probes. Jim L
 
 **Equipment Description**:
@@ -62,7 +62,7 @@ Omega Engineering, Copper-Constantan thermocouple wire. Range -200 to 350 °C. L
 ### **Hourly Table**
 
 | Variable | Description | Units |
-|----------------|---------------------------------------|----------------|
+|-----------------|--------------------------------------|-----------------|
 | timestamp | Date and Time - Alaska standard time 2400 format | YYYY-MM-DD hh:mm |
 | CT_Air_Temp_3m | Hourly average temperature in the control plot at 3 meters. | celsius |
 | GH_Air_Temp_1m | Hourly average temperature in the control greenhouse at about 1 meter above the moss/sedge surface. | celsius |
@@ -73,7 +73,7 @@ Omega Engineering, Copper-Constantan thermocouple wire. Range -200 to 350 °C. L
 ### **Three Hourly Table**
 
 | **Variable** | **Definition** | **Units** |
-|------------------|------------------------|-------------------------------|
+|------------------|------------------------|------------------------------|
 | timestamp | Date and Time Alaska standard time | Date and Time - Alaska standard time 2400 format |
 | NP sur | NP plot soil temp within 1 cm celsius | celsius |
 | NP 5CM | NP plot soil temp at 5 cm | celsius |
@@ -97,6 +97,15 @@ Omega Engineering, Copper-Constantan thermocouple wire. Range -200 to 350 °C. L
 | CT 25 CM | CT plot soil temp at 25 cm | celsius |
 | BATTERY | Battery volts | volt |
 :::
+
+# Online data.
+
+-   Laundre, J. 2022. Hourly weather data from the Arctic LTER Wet Sedge
+    Inlet Experimental plots from 1994 to present, Toolik Field Station,
+    North Slope, Alaska. ver 5. Environmental Data Initiative.
+    https://doi.org/10.6073/pasta/87bb699469101659867f951b69219c37
+
+-   Laundre, J. and G. Shaver. 2022. Soil temperature data collected from the Arctic LTER wet sedge experimental site Toolik Field Station North Slope, Alaska from 1994 to 2020 ver 7. Environmental Data Initiative. https://doi.org/10.6073/pasta/b9042efc729ffb531bdb3974cb6d866c
 
 # Air Temperature, RH, and Battery
 
