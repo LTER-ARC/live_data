@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
         
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-documentation" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#documentation" data-scrolling="false" href="#documentation" aria-controls="documentation" aria-selected="true"><span class="nav-link-text">Documentation</span></a></li><li class="nav-item" role="presentation"><a id="tab-air-temperature-rh-par-and-wind-direction-and-speed" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#air-temperature-rh-par-and-wind-direction-and-speed" data-scrolling="false" href="#air-temperature-rh-par-and-wind-direction-and-speed" aria-controls="air-temperature-rh-par-and-wind-direction-and-speed" aria-selected="false"><span class="nav-link-text">Air Temperature, RH, PAR, and Wind Direction and Speed</span></a></li><li class="nav-item" role="presentation"><a id="tab-soil-temperatures-and-battery" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#soil-temperatures-and-battery" data-scrolling="false" href="#soil-temperatures-and-battery" aria-controls="soil-temperatures-and-battery" aria-selected="false"><span class="nav-link-text">Soil Temperatures and Battery</span></a></li></ul></div></div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-documentation" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#documentation" data-scrolling="false" href="#documentation" aria-controls="documentation" aria-selected="true"><span class="nav-link-text">Documentation</span></a></li><li class="nav-item" role="presentation"><a id="tab-online-data-url" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#online-data-url" data-scrolling="false" href="#online-data-url" aria-controls="online-data-url" aria-selected="false"><span class="nav-link-text">Online data URL:</span></a></li><li class="nav-item" role="presentation"><a id="tab-air-temperature-rh-par-and-wind-direction-and-speed" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#air-temperature-rh-par-and-wind-direction-and-speed" data-scrolling="false" href="#air-temperature-rh-par-and-wind-direction-and-speed" aria-controls="air-temperature-rh-par-and-wind-direction-and-speed" aria-selected="false"><span class="nav-link-text">Air Temperature, RH, PAR, and Wind Direction and Speed</span></a></li><li class="nav-item" role="presentation"><a id="tab-soil-temperatures-and-battery" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#soil-temperatures-and-battery" data-scrolling="false" href="#soil-temperatures-and-battery" aria-controls="soil-temperatures-and-battery" aria-selected="false"><span class="nav-link-text">Soil Temperatures and Battery</span></a></li></ul></div></div>
 </nav>
 </header></header>
 <!-- content -->
@@ -206,12 +206,432 @@ changes
 2019-08-10 Changed the logger OS to CR23xPB to use the Pakbus radio network. Changed out wind sensors. Put in: WindSp K2040; WindDir R10462. Updated the multiplier for windir<br>
 2019-09-26 Using the maximum of wind direction to calculate a new multiplier. Old was 0.365378, new is 0.360721. The old one was about +5 degrees off.<br>
 2021-09-2 Corrected mistake in Daily Data Table. It should be “2: 86400 Seconds Interval”, not “1: 86400 Seconds into Interval”.</p>
+<div class="h5">
+<strong>Current Data Tables</strong>
+</div>
+<div class="h6">
+<strong>Half-hourly met data</strong>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 48%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Variable</strong></th>
+<th><strong>Definition</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Timestamp</td>
+<td>Date and hour minute</td>
+<td>YYY-mm-dd HH:MM</td>
+</tr>
+<tr class="even">
+<td>RAIN</td>
+<td>Rainfall</td>
+<td>millimeter</td>
+</tr>
+<tr class="odd">
+<td>CTEMP 3M</td>
+<td>Temperature at 3 m height in the control plot</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>GTEMP</td>
+<td>Temperature in greenhouse - prior to 1994 averaged from sensor in the north and south end of the greenhouse, after 1994, this is a single measurement from one sensor in the center of the greenhouse; Note no data from time when greenhouse sides are not up (i.e., fall/winter from mid Aug-mid June)</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>STEMP</td>
+<td>Temperature in the shade house - prior to 1994 averaged from sensors in the north and south end of the shade house, after 1994, this is a single measurement from one sensor in the center of the shade house; Note no data from the time when shade house sides are not up (i.e., fall/winter from mid Aug-mid June)</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>CRH 3M</td>
+<td>Relative humidity in the control plot at 3 m height</td>
+<td>percent</td>
+</tr>
+<tr class="odd">
+<td>GRH</td>
+<td>Average relative humidity in the greenhouse - note that after 1994, this is a single measurement taken from the middle of the greenhouse</td>
+<td>percent</td>
+</tr>
+<tr class="even">
+<td>SRH</td>
+<td>Average relative humidity in the shade house - note that after 1994, this is a single measurement taken from the middle of the shade house</td>
+<td>percent</td>
+</tr>
+<tr class="odd">
+<td>PYR</td>
+<td>PYRANOMETER: global solar radiation (sun plus sky), averaged over measurement interval (kw/m-2/s-1)</td>
+<td>kilowattPerMeterSquaredPerSecond</td>
+</tr>
+<tr class="even">
+<td>CQUANT</td>
+<td>Control Average Photosynthetic Active Radiation (PAR) over an hour as measured with a LiCor Quantum sensor</td>
+<td>micromolePerMeterSquaredPerSecond</td>
+</tr>
+<tr class="odd">
+<td>GQUANT</td>
+<td>For Greenhouse: Average Photosynthetic Active Radiation (PAR) over an hour as measured with a LiCor Quantum sensor</td>
+<td>micromolePerMeterSquaredPerSecond</td>
+</tr>
+<tr class="even">
+<td>SQUANT</td>
+<td>For Shade house: Average Photosynthetic Active Radiation (PAR) over an hour as measured with a LiCor Quantum sensor</td>
+<td>micromolePerMeterSquaredPerSecond</td>
+</tr>
+<tr class="odd">
+<td>WIND SPEED</td>
+<td>Wind speed at 3 meters</td>
+<td>meterPerSecond</td>
+</tr>
+<tr class="even">
+<td>WIND DIR</td>
+<td>Wind direction at 3 meters</td>
+<td>degree</td>
+</tr>
+<tr class="odd">
+<td>WIND DIR STD</td>
+<td>Wind vector direction standard deviation</td>
+<td>degree</td>
+</tr>
+</tbody>
+</table>
+<div class="h6">
+<strong>Three-hourly data table</strong>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Variable</strong></th>
+<th><strong>Definition</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DATE</td>
+<td>Date in YYY-mm-dd HH:MM</td>
+<td>YYY-mm-dd HH:MM</td>
+</tr>
+<tr class="even">
+<td>CT1_10CM</td>
+<td>Control plot soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>CT1_20CM</td>
+<td>Control plot soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>CT1_40CM</td>
+<td>Control plot soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>CT2_10CM</td>
+<td>Control plot soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>CT2_20CM</td>
+<td>Control plot soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>CT2_40CM</td>
+<td>Control plot soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>GH1_10CM</td>
+<td>Control greenhouse soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>GH1_20CM</td>
+<td>Control greenhouse soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>GH1_40CM</td>
+<td>Control greenhouse soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>GH2_10CM</td>
+<td>Control greenhouse soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>GH2_20CM</td>
+<td>Control greenhouse soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>GH2_40CM</td>
+<td>Control greenhouse soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>GHNP1_10CM</td>
+<td>Fertilized greenhouse soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>GHNP1_20CM</td>
+<td>Fertilized greenhouse soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>GHNP1_40CM</td>
+<td>Fertilized greenhouse soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>GHNP2_10CM</td>
+<td>Fertilized greenhouse soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>GHNP2_20CM</td>
+<td>Fertilized greenhouse soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>GHNP2_40CM</td>
+<td>Fertilized greenhouse soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>SH1_10CM</td>
+<td>Control shade house soil temperature measured at 10 cm depth with a thermocouple. Measued in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>SH1_20CM</td>
+<td>Control shade house soil temperature measured at 20 cm depth with a thermocouple. Measued in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>SH1_40CM</td>
+<td>Control shade house soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>SH2_10CM</td>
+<td>Control shade house soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>SH2_20CM</td>
+<td>Control shade house soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>SH2_40CM</td>
+<td>Control shade house soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>SHNP1_10CM</td>
+<td>Fertilized shade house soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>SHNP1_20CM</td>
+<td>Fertilized shade house soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>SHNP1_40CM</td>
+<td>Fertilized shade house soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>SHNP2_10CM</td>
+<td>Fertilized shade house soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>SHNP2_20CM</td>
+<td>Fertilized shade house soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>SHNP2_40CM</td>
+<td>Fertilized shade house soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NP1_10CM</td>
+<td>Fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NP1_20CM</td>
+<td>Fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NP1_40CM</td>
+<td>Fertilized plot soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NP2_10CM</td>
+<td>Fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NP2_20CM</td>
+<td>Fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NP2_40CM</td>
+<td>Fertilized plot soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NPEX1_20</td>
+<td>Exclosure fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Measued in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NPEX1_10</td>
+<td>Exclosure fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Measued in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NPEX1_40</td>
+<td>Exclosure fertilized plot soil temperature measured at 40 cm depth with a thermocouple. Measued in the south end of the plot</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NPEX2_40</td>
+<td>Exclosure fertilized plot soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NPEX2_10</td>
+<td>Exclosure fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NPEX2_20</td>
+<td>Exclosure fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>CT_In</td>
+<td>Air temperature within the control plot canopy.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>GH_In</td>
+<td>Air temperature within the greenhouse plot canopy.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>GH_Above</td>
+<td>Air temperature above the greenhouse plot canopy.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>GHNP_In</td>
+<td>Air temperature within the greenhouse fertilized plot canopy.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>GHNP_Above</td>
+<td>Air temperature above the fertilized greenhouse plot canopy.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NP_In</td>
+<td>Air temperature within the fertilized plot canopy.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NP_Above</td>
+<td>Air temperature above the fertilized plot canopy.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>NPEX1_Above</td>
+<td>Air temperature above the exclosure fertilized plot canopy.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NPEX1_In</td>
+<td>Air temperature within the exclosure fertilized plot canopy.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>CT3_20CM</td>
+<td>Control plot soil temperature measured at 20 cm depth with a thermocouple. The third set is about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>GH3_20CM</td>
+<td>Control greenhouse soil temperature measured at 20 cm depth with a thermocouple. The third set is about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>GHNP3_20CM</td>
+<td>Fertilized greenhouse soil temperature measured at 20 cm depth with a thermocouple. The third set is about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>SH3_20CM</td>
+<td>Control shade house soil temperature measured at 20 cm depth with a thermocouple. The third set is about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="odd">
+<td>SHNP3_20CM</td>
+<td>Fertilized shade house soil temperature measured at 20 cm depth with a thermocouple. Third set is about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+<tr class="even">
+<td>NP3_20CM</td>
+<td>Fertilized plot soil temperature measured at 20 cm depth with a thermocouple. The third set is about 2 meters apart.</td>
+<td>celsius</td>
+</tr>
+</tbody>
+</table>
 <div class="h4">
 Wiring
 
 Diagram
 </div>
 <p>CR32x and multiplexers <a href="other_sites/wiring_files/MAT89_CR23x_Amp416_1&amp;2wiring.pdf" target="_blank">PDF</a></p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div id="online-data-url" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-online-data-url">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p>Hourly Met data 2000-2010 -<a href="https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-arc&amp;identifier=10404" class="uri">https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-arc&amp;identifier=10404</a> Hourly Met data 2010-2019 -<a href="https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-arc&amp;identifier=10405" class="uri">https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-arc&amp;identifier=10405</a> Soil and canopy temperature data -<a href="https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-arc&amp;identifier=20088" class="uri">https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-arc&amp;identifier=20088</a></p>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
