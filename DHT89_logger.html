@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
         
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-documentation" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#documentation" data-scrolling="false" href="#documentation" aria-controls="documentation" aria-selected="true"><span class="nav-link-text">Documentation</span></a></li><li class="nav-item" role="presentation"><a id="tab-air-temperature-rh-battery-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#air-temperature-rh-battery-data" data-scrolling="false" href="#air-temperature-rh-battery-data" aria-controls="air-temperature-rh-battery-data" aria-selected="false"><span class="nav-link-text">Air Temperature, RH, Battery Data</span></a></li><li class="nav-item" role="presentation"><a id="tab-soil-temperature-and-moisture-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#soil-temperature-and-moisture-data" data-scrolling="false" href="#soil-temperature-and-moisture-data" aria-controls="soil-temperature-and-moisture-data" aria-selected="false"><span class="nav-link-text">Soil Temperature and Moisture Data</span></a></li></ul></div></div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-documentation" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#documentation" data-scrolling="false" href="#documentation" aria-controls="documentation" aria-selected="true"><span class="nav-link-text">Documentation</span></a></li><li class="nav-item" role="presentation"><a id="tab-online-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#online-data" data-scrolling="false" href="#online-data" aria-controls="online-data" aria-selected="false"><span class="nav-link-text">Online Data</span></a></li><li class="nav-item" role="presentation"><a id="tab-air-temperature-rh-battery-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#air-temperature-rh-battery-data" data-scrolling="false" href="#air-temperature-rh-battery-data" aria-controls="air-temperature-rh-battery-data" aria-selected="false"><span class="nav-link-text">Air Temperature, RH, Battery Data</span></a></li><li class="nav-item" role="presentation"><a id="tab-soil-temperature-and-moisture-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#soil-temperature-and-moisture-data" data-scrolling="false" href="#soil-temperature-and-moisture-data" aria-controls="soil-temperature-and-moisture-data" aria-selected="false"><span class="nav-link-text">Soil Temperature and Moisture Data</span></a></li></ul></div></div>
 </nav>
 </header></header>
 <!-- content -->
@@ -217,7 +217,7 @@ site
 <li><p>2020-05-21. The input location for the RH was wrong. Should be SE 5 not 4. It must of changed when I upgraded the OS to PakBusOS. I saw the mistake when documenting the inputs for the crew at TSF to troubleshoot the soil temp multiplexer and from a picture of the wiring. Jim L</p></li>
 <li><p>2020-07-01. The thermocouples on the AM416 stopped working in April. After testing with a different wire and since the soil moisture probes are still working, moving the thermocouples to a AM25T S/N #1540. Finally working on Aug 8, 2020 Jim L</p></li>
 </ul>
-<strong>Notes from the Subroutine for Steinhart Hart equation from logger program.</strong>
+<strong>Notes from the Subroutine for Steinhart Hart equation from the logger program.</strong>
 <p>To get better accuracy for Campbell Scientific’s 107 Belatherm 100K6A Thermistor a subroutine is used in non-CRBasic loggers. The thermistor’s resistance is measured, and a Steinhart-Hart equation is used to calculate the temperature. This improves the accuracy at low temperatures over the logger’s instruction for thermistors which uses a polynomial for the conversion from resistance to temperature. Note that Campbell’s loggers with CRBasic now use the Steinhart-Hart equation for thermistors.</p>
 <strong>Details on the subroutine.</strong>
 <p>Logger reads reference temperature with a bridge statement and then converts the bridge voltage to resistance using Rs=Rf(Vx/Vs-1)-Rb, where bridge resistors Rf and Rb are 1 and 249 K ohms respectively, Vs is the voltage read and Vx is the excitation voltage. The Steinhart Hart equation is: 1/T = A + B(ln Rs) + C(ln Rs)^3 where coefficients are:</p>
@@ -229,7 +229,9 @@ site
 <p>Prior to 2012-08-10 the polynomial instruction, 55, is used to apply the Steinhart and Hart equation. Instruction 55 does not allow entering the coefficients with scientific notation. To use this instruction with as much resolution as possible, the In resistance term is pre-scaled by 10^-3. This allows the first-order coefficient (B) to be multiplied by 10^3 and the 3rd order coefficient (C) to be multiplied by 10^9. However, for the 107 thermistors, C0 is still too small for Instruction 55. So, it is set to 0, and then P30 is used to store the C0 value, and then added with P33. Adapted from Campbell Scientific’s 109 manual, Revision: 2/07.</p>
 <p>After 2012-08-10, the logger’s Steinhart-Hart instruction P200 is used.</p>
 <p>Program adapted from Campbell Scientific’s 107 manual (https://www.campbellsci.com/107).</p>
+<div class="h6">
 <strong>Current Data Tables</strong>
+</div>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
@@ -418,6 +420,22 @@ Wiring
 Diagram
 </div>
 <p>CR1000 <a href="other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-logger.pdf" target="_blank">PDF</a> AM416 multiplexer <a href="other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-AM416.pdf" target="_blank">PDF</a> AM25T multiplexer <a href="other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-AM25T.pdf" target="blank">PDF</a></p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div id="online-data" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-online-data">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<ul>
+<li>Shaver, G. and J. Laundre. 2024. Air temperature, relative humidity, soil temperatures and soil moisture for Arctic Long Term Experimental Research (ARC LTER) heath experimental plots, Toolik Field Station, North Slope Alaska for 2001-2024-09-22. ver 3. Environmental Data Initiative. https://doi.org/10.6073/pasta/a73e76b5a5599e20c5028c63dbfb7835</li>
+</ul>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
