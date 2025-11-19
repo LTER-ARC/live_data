@@ -61,10 +61,99 @@ Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
 2019-09-26 Using the maximum of wind direction to calculate a new multiplier. Old was 0.365378, new is 0.360721. The old one was about +5 degrees off.\
 2021-09-2 Corrected mistake in Daily Data Table. It should be "2: 86400 Seconds Interval", not "1: 86400 Seconds into Interval".
 
+## **Current Data Tables**
+
+### **Half-hourly met data**
+
+| **Variable** | **Definition** | **Units** |
+|------------------|-----------------------------------|-------------------|
+| Timestamp | Date and hour minute | YYY-mm-dd HH:MM |
+| RAIN | Rainfall | millimeter |
+| CTEMP 3M | Temperature at 3 m height in the control plot | celsius |
+| GTEMP | Temperature in greenhouse - prior to 1994 averaged from sensor in the north and south end of the greenhouse, after 1994, this is a single measurement from one sensor in the center of the greenhouse; Note no data from time when greenhouse sides are not up (i.e., fall/winter from mid Aug-mid June) | celsius |
+| STEMP | Temperature in the shade house - prior to 1994 averaged from sensors in the north and south end of the shade house, after 1994, this is a single measurement from one sensor in the center of the shade house; Note no data from the time when shade house sides are not up (i.e., fall/winter from mid Aug-mid June) | celsius |
+| CRH 3M | Relative humidity in the control plot at 3 m height | percent |
+| GRH | Average relative humidity in the greenhouse - note that after 1994, this is a single measurement taken from the middle of the greenhouse | percent |
+| SRH | Average relative humidity in the shade house - note that after 1994, this is a single measurement taken from the middle of the shade house | percent |
+| PYR | PYRANOMETER: global solar radiation (sun plus sky), averaged over measurement interval (kw/m-2/s-1) | kilowattPerMeterSquaredPerSecond |
+| CQUANT | Control Average Photosynthetic Active Radiation (PAR) over an hour as measured with a LiCor Quantum sensor | micromolePerMeterSquaredPerSecond |
+| GQUANT | For Greenhouse: Average Photosynthetic Active Radiation (PAR) over an hour as measured with a LiCor Quantum sensor | micromolePerMeterSquaredPerSecond |
+| SQUANT | For Shade house: Average Photosynthetic Active Radiation (PAR) over an hour as measured with a LiCor Quantum sensor | micromolePerMeterSquaredPerSecond |
+| WIND SPEED | Wind speed at 3 meters | meterPerSecond |
+| WIND DIR | Wind direction at 3 meters | degree |
+| WIND DIR STD | Wind vector direction standard deviation | degree |
+
+### **Three-hourly data table**
+
+| **Variable** | **Definition** | **Units** |
+|------------------------|------------------------|------------------------|
+| DATE | Date in YYY-mm-dd HH:MM | YYY-mm-dd HH:MM |
+| CT1_10CM | Control plot soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot. | celsius |
+| CT1_20CM | Control plot soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| CT1_40CM | Control plot soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| CT2_10CM | Control plot soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| CT2_20CM | Control plot soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| CT2_40CM | Control plot soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| GH1_10CM | Control greenhouse soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| GH1_20CM | Control greenhouse soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| GH1_40CM | Control greenhouse soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| GH2_10CM | Control greenhouse soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| GH2_20CM | Control greenhouse soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| GH2_40CM | Control greenhouse soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| GHNP1_10CM | Fertilized greenhouse soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| GHNP1_20CM | Fertilized greenhouse soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| GHNP1_40CM | Fertilized greenhouse soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| GHNP2_10CM | Fertilized greenhouse soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| GHNP2_20CM | Fertilized greenhouse soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| GHNP2_40CM | Fertilized greenhouse soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| SH1_10CM | Control shade house soil temperature measured at 10 cm depth with a thermocouple. Measued in the south end of the plot | celsius |
+| SH1_20CM | Control shade house soil temperature measured at 20 cm depth with a thermocouple. Measued in the south end of the plot | celsius |
+| SH1_40CM | Control shade house soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| SH2_10CM | Control shade house soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| SH2_20CM | Control shade house soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| SH2_40CM | Control shade house soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| SHNP1_10CM | Fertilized shade house soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| SHNP1_20CM | Fertilized shade house soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| SHNP1_40CM | Fertilized shade house soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| SHNP2_10CM | Fertilized shade house soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| SHNP2_20CM | Fertilized shade house soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| SHNP2_40CM | Fertilized shade house soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| NP1_10CM | Fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| NP1_20CM | Fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| NP1_40CM | Fertilized plot soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
+| NP2_10CM | Fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| NP2_20CM | Fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| NP2_40CM | Fertilized plot soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| NPEX1_20 | Exclosure fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Measued in the south end of the plot | celsius |
+| NPEX1_10 | Exclosure fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Measued in the south end of the plot | celsius |
+| NPEX1_40 | Exclosure fertilized plot soil temperature measured at 40 cm depth with a thermocouple. Measued in the south end of the plot | celsius |
+| NPEX2_40 | Exclosure fertilized plot soil temperature measured at 40 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| NPEX2_10 | Exclosure fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| NPEX2_20 | Exclosure fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Second set about 2 meters apart. | celsius |
+| CT_In | Air temperature within the control plot canopy. | celsius |
+| GH_In | Air temperature within the greenhouse plot canopy. | celsius |
+| GH_Above | Air temperature above the greenhouse plot canopy. | celsius |
+| GHNP_In | Air temperature within the greenhouse fertilized plot canopy. | celsius |
+| GHNP_Above | Air temperature above the fertilized greenhouse plot canopy. | celsius |
+| NP_In | Air temperature within the fertilized plot canopy. | celsius |
+| NP_Above | Air temperature above the fertilized plot canopy. | celsius |
+| NPEX1_Above | Air temperature above the exclosure fertilized plot canopy. | celsius |
+| NPEX1_In | Air temperature within the exclosure fertilized plot canopy. | celsius |
+| CT3_20CM | Control plot soil temperature measured at 20 cm depth with a thermocouple. The third set is about 2 meters apart. | celsius |
+| GH3_20CM | Control greenhouse soil temperature measured at 20 cm depth with a thermocouple. The third set is about 2 meters apart. | celsius |
+| GHNP3_20CM | Fertilized greenhouse soil temperature measured at 20 cm depth with a thermocouple. The third set is about 2 meters apart. | celsius |
+| SH3_20CM | Control shade house soil temperature measured at 20 cm depth with a thermocouple. The third set is about 2 meters apart. | celsius |
+| SHNP3_20CM | Fertilized shade house soil temperature measured at 20 cm depth with a thermocouple. Third set is about 2 meters apart. | celsius |
+| NP3_20CM | Fertilized plot soil temperature measured at 20 cm depth with a thermocouple. The third set is about 2 meters apart. | celsius |
+
 # Wiring Diagram
 
 CR32x and multiplexers [PDF](other_sites/wiring_files/MAT89_CR23x_Amp416_1&2wiring.pdf){target="_blank"}
 :::
+
+# Online data URL:
+
+Hourly Met data 2000-2010 -<https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-arc&identifier=10404> Hourly Met data 2010-2019 -<https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-arc&identifier=10405> Soil and canopy temperature data -<https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-arc&identifier=20088>
 
 # Air Temperature, RH, PAR, and Wind Direction and Speed
 
