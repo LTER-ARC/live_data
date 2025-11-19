@@ -73,7 +73,7 @@ List of manufacturers and suppliers.
 
 -   2020-07-01. The thermocouples on the AM416 stopped working in April. After testing with a different wire and since the soil moisture probes are still working, moving the thermocouples to a AM25T S/N #1540. Finally working on Aug 8, 2020 Jim L
 
-**Notes from the Subroutine for Steinhart Hart equation from logger program.**
+**Notes from the Subroutine for Steinhart Hart equation from the logger program.**
 
 To get better accuracy for Campbell Scientific's 107 Belatherm 100K6A Thermistor a subroutine is used in non-CRBasic loggers. The thermistor's resistance is measured, and a Steinhart-Hart equation is used to calculate the temperature. This improves the accuracy at low temperatures over the logger's instruction for thermistors which uses a polynomial for the conversion from resistance to temperature. Note that Campbell's loggers with CRBasic now use the Steinhart-Hart equation for thermistors.
 
@@ -93,7 +93,7 @@ After 2012-08-10, the logger's Steinhart-Hart instruction P200 is used.
 
 Program adapted from Campbell Scientific's 107 manual (https://www.campbellsci.com/107).
 
-**Current Data Tables**
+### **Current Data Tables**
 
 | **Half-hourly met data** |   |   |
 |-------------------|---------------------------------|--------------------|
@@ -137,6 +137,10 @@ Program adapted from Campbell Scientific's 107 manual (https://www.campbellsci.c
 
 CR1000 [PDF](other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-logger.pdf){target="_blank"} AM416 multiplexer [PDF](other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-AM416.pdf){target="_blank"} AM25T multiplexer [PDF](other_sites/wiring_files/DHT89-CR10x-2020-07-wiring-AM25T.pdf){target="blank"}
 :::
+
+# Online Data
+
+-   Shaver, G. and J. Laundre. 2024. Air temperature, relative humidity, soil temperatures and soil moisture for Arctic Long Term Experimental Research (ARC LTER) heath experimental plots, Toolik Field Station, North Slope Alaska for 2001-2024-09-22. ver 3. Environmental Data Initiative. https://doi.org/10.6073/pasta/a73e76b5a5599e20c5028c63dbfb7835
 
 # Air Temperature, RH, Battery Data
 
