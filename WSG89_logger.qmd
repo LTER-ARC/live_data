@@ -62,7 +62,7 @@ Omega Engineering, Copper-Constantan thermocouple wire. Range -200 to 350 °C. L
 ### **Hourly Table**
 
 | Variable | Description | Units |
-|-----------------|--------------------------------------|-----------------|
+|------------------|-------------------------------------|------------------|
 | timestamp | Date and Time - Alaska standard time 2400 format | YYYY-MM-DD hh:mm |
 | CT_Air_Temp_3m | Hourly average temperature in the control plot at 3 meters. | celsius |
 | GH_Air_Temp_1m | Hourly average temperature in the control greenhouse at about 1 meter above the moss/sedge surface. | celsius |
@@ -75,11 +75,11 @@ Omega Engineering, Copper-Constantan thermocouple wire. Range -200 to 350 °C. L
 | **Variable** | **Definition** | **Units** |
 |------------------|------------------------|------------------------------|
 | timestamp | Date and Time Alaska standard time | Date and Time - Alaska standard time 2400 format |
-| NP sur | NP plot soil temp within 1 cm celsius | celsius |
+| NP sur | NP plot soil temp within 1 cm Celsius | celsius |
 | NP 5CM | NP plot soil temp at 5 cm | celsius |
 | NP 10CM | NP plot soil temp at 10 cm | celsius |
 | NP 25 CM | NP plot soil temp at 25 cm | celsius |
-| GH sur | GH plot soil temp within 1 cm celsius | celsius |
+| GH sur | GH plot soil temp within 1 cm Celsius | celsius |
 | GH 5CM | GH plot soil temp at 5 cm | celsius |
 | GH 10CM | GH plot soil temp at 10 cm | celsius |
 | GH 25 CM | GH plot soil temp at 25 cm | celsius |
@@ -91,7 +91,7 @@ Omega Engineering, Copper-Constantan thermocouple wire. Range -200 to 350 °C. L
 | P 5CM | P plot soil temp at 5 cm | celsius |
 | P 10CM | P plot soil temp at 10 cm | celsius |
 | P 25 CM | P plot soil temp at 25 cm | celsius |
-| CT sur | CT plot soil temp within 1 cm celsius | celsius |
+| CT sur | CT plot soil temp within 1 cm Celsius | celsius |
 | CT 5CM | CT plot soil temp at 5 cm | celsius |
 | CT 10CM | CT plot soil temp at 10 cm | celsius |
 | CT 25 CM | CT plot soil temp at 25 cm | celsius |
@@ -100,10 +100,7 @@ Omega Engineering, Copper-Constantan thermocouple wire. Range -200 to 350 °C. L
 
 # Online data.
 
--   Laundre, J. 2022. Hourly weather data from the Arctic LTER Wet Sedge
-    Inlet Experimental plots from 1994 to present, Toolik Field Station,
-    North Slope, Alaska. ver 5. Environmental Data Initiative.
-    https://doi.org/10.6073/pasta/87bb699469101659867f951b69219c37
+-   Laundre, J. 2022. Hourly weather data from the Arctic LTER Wet Sedge Inlet Experimental plots from 1994 to present, Toolik Field Station, North Slope, Alaska. ver 5. Environmental Data Initiative. https://doi.org/10.6073/pasta/87bb699469101659867f951b69219c37
 
 -   Laundre, J. and G. Shaver. 2022. Soil temperature data collected from the Arctic LTER wet sedge experimental site Toolik Field Station North Slope, Alaska from 1994 to 2020 ver 7. Environmental Data Initiative. https://doi.org/10.6073/pasta/b9042efc729ffb531bdb3974cb6d866c
 

@@ -97,7 +97,7 @@ Program adapted from Campbell Scientific's 107 manual (https://www.campbellsci.c
 
 | **Half-hourly met data** |   |   |
 |-------------------|---------------------------------|--------------------|
-| TIMESTAMP |  | YYYY-MM-DD hh:mm |
+| TIMESTAMP | Date and time in Alaska Standard Time | YYYY-MM-DD hh:mm |
 | RECORD |  | number |
 | CS500Temp_AVG | Air temperature at 3 meters. From 2001 to August 2009 the sensor was a Campbell Scientific 107 using the Steinhart-Hart equation for greater low-temperature accuracy. In 2009, a CS500 sensor was added. For temperatures below -39 C (lower limit of the CS500), 107 probe readings were substituted. | clesius |
 | CS500_RH_AVG | Percent relative humidity at 3 meters | percent |

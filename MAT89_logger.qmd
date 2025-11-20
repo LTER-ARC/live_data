@@ -67,7 +67,7 @@ Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
 
 | **Variable** | **Definition** | **Units** |
 |------------------|-----------------------------------|-------------------|
-| Timestamp | Date and hour minute | YYY-mm-dd HH:MM |
+| Timestamp | Date and hour minute. Alaska Standard Time | YYY-mm-dd HH:MM |
 | RAIN | Rainfall | millimeter |
 | CTEMP 3M | Temperature at 3 m height in the control plot | celsius |
 | GTEMP | Temperature in greenhouse - prior to 1994 averaged from sensor in the north and south end of the greenhouse, after 1994, this is a single measurement from one sensor in the center of the greenhouse; Note no data from time when greenhouse sides are not up (i.e., fall/winter from mid Aug-mid June) | celsius |
@@ -87,7 +87,7 @@ Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
 
 | **Variable** | **Definition** | **Units** |
 |------------------------|------------------------|------------------------|
-| DATE | Date in YYY-mm-dd HH:MM | YYY-mm-dd HH:MM |
+| DATE | Date and hour minute. Alaska Standard Time | YYY-mm-dd HH:MM |
 | CT1_10CM | Control plot soil temperature measured at 10 cm depth with a thermocouple. Measured in the south end of the plot. | celsius |
 | CT1_20CM | Control plot soil temperature measured at 20 cm depth with a thermocouple. Measured in the south end of the plot | celsius |
 | CT1_40CM | Control plot soil temperature measured at 40 cm depth with a thermocouple. Measured in the south end of the plot | celsius |

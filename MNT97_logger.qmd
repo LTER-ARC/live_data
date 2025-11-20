@@ -70,7 +70,7 @@ Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
 ### Hourly table
 
 | Variable | Definition | Units |
-|----------------|----------------------------------------|----------------|
+|----|----|----|
 | timestamp | Date and Time - Alaska standard time 2400 format | YYYY-MM-DD hh:mm |
 | ct_air_temp | Control temperature at 3 meters | celsius |
 | gh_air_temp | Control Greenhouse temperature | celsius |
@@ -124,7 +124,7 @@ Omega Engineering, Inc. P.O. Box 4047, Stamford, CT 06907-0047 (800)826-6342
 CR10x program with wiring notes [PDF](other_sites/wiring_files/MNT97_2014NACID_10AUG14_.pdf){target="_blank"}
 :::
 
-# Online data: 
+# Online data:
 
 <https://doi.org/10.6073/pasta/13c5a041bf90c60da060d08b3c5eb07b>
 
