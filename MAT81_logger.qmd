@@ -15,6 +15,57 @@ Nitrogen and phosphorus treatment was discontinued in 2015. These sensors were i
 
 -   Shaver, G.R., M.S. Bret-Harte, M.H. Jones, J. Johnstone, L. Gough, J. Laundre, and F.S. Chapin, III. 2001. Species Composition Interacts with Fertilizer to Control Long Term Change in Tundra Productivity. Ecology 82: 3163-3181.
 
+**List of manufacturers and suppliers.**
+
+Campbell Scientific, Inc. 81 W. 1800 N. Logan, Utah 84321-1784 (435)750-1739
+
+## Current Data Table
+
+### Hourly data.
+
+| **Variable** | **Difinition** | **Units** |
+|----|----|----|
+| TIMESTAMP | Date and Time in Alaska standard time | YYYY_mm-dd HH:MM |
+| Air_3M_Avg | Control temperature at 3 meters | celsius |
+| RH | Relative humidity at 3 meters | percent |
+| CT1_10cm_Avg | Control plot soil temperature measured at 10 cm depth with a thermocouple. Replicate 1 | celsius |
+| CT2_10cm_Avg | Control plot soil temperature measured at 10 cm depth with a thermocouple. Replicate 2 | celsius |
+| CT3_10cm_Avg | Control plot soil temperature measured at 10 cm depth with a thermocouple. Replicate 3 | celsius |
+| CT1_20cm_Avg | Control plot soil temperature measured at 20 cm depth with a thermocouple. Replicate 1 | celsius |
+| CT2_20cm_Avg | Control plot soil temperature measured at 20 cm depth with a thermocouple. Replicate 2 | celsius |
+| CT3_20cm_Avg | Control plot soil temperature measured at 20 cm depth with a thermocouple. Replicate 3 | celsius |
+| NP1_10cm_Avg | Fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Replicate 1 | celsius |
+| NP2_10cm_Avg | Fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Replicate 2 | celsius |
+| NP3_10cm_Avg | Fertilized plot soil temperature measured at 10 cm depth with a thermocouple. Replicate 3 | celsius |
+| NP1_20cm_Avg | Fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Replicate 1 | celsius |
+| NP2_20cm_Avg | Fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Replicate 2 | celsius |
+| NP3_20cm_Avg | Fertilized plot soil temperature measured at 20 cm depth with a thermocouple. Replicate 3 | celsius |
+| CT1_10cm_VW | Control plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 10 cm. Replicate 1 | gramPerGram |
+| CT1_10cm_PA_uS | Control plot soil moisture, Campbell Science CS616 period output in microseconds. The probe is at 10 cm. Replicate 1. | microsecond |
+| CT2_10cm_VW | Control plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 10 cm. Replicate 2. | gramPerGram |
+| CT2_10cm_PA_uS | Control plot soil moisture, Campbell Science CS616 period output in microseconds. The probe is at 10 cm. Replicate 2 | microsecond |
+| CT3_10cm_VW | Control plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 10 cm. Replicate 3 | gramPerGram |
+| CT3_10cm_PA_uS | Control plot soil moisture, Campbell Science CS616 period output in microseconds. Probe is at 10 cm. Replicate 3 | microsecond |
+| CT1_20cm_VW | Control plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 20 cm. Replicate 1 | gramPerGram |
+| CT1_20cm_PA_uS | Control plot soil moisture, Campbell Science CS616 period output in microseconds. The probe is at 20 cm. Replicate 1 | microsecond |
+| CT2_20cm_VW | Control plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 20 cm. Replicate 2. | gramPerGram |
+| CT2_20cm_PA_uS | Control plot soil moisture, Campbell Science CS616 period output in microseconds. The probe is at 20 cm. Replicate 2 | microsecond |
+| CT3_20cm_VW | Control plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 20 cm. Replicate 3. | gramPerGram |
+| CT3_20cm_PA_uS | Control plot soil moisture, Campbell Science CS616 period output in microseconds. The probe is at 20 cm. Replicate 3 | microsecond |
+| NP1_10cm_VW | Nitrogen plus phosphorus plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 10 cm. Replicate 1 | gramPerGram |
+| NP1_10cm_PA_uS | Nitrogen plus phosphorus plot soil moisture, Campbell Science CS616 period output in microseconds. The probe is at 10 cm. Replicate 1. | microsecond |
+| NP2_10cm_VW | Nitrogen plus phosphorus plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 10 cm. Replicate 2. | gramPerGram |
+| NP2_10cm_PA_uS | Nitrogen plus phosphorus plot soil moisture, Campbell Science CS616 period output in microseconds. The probe is at 10 cm. Replicate 2 | microsecond |
+| NP3_10cm_VW | Nitrogen plus phosphorus plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 10 cm. Replicate 3 | gramPerGram |
+| NP3_10cm_PA_uS | Nitrogen plus phosphorus plot soil moisture, Campbell Science CS616 period output in microseconds. Probe is at 10 cm. Replicate 3 | microsecond |
+| NP1_20cm_VW | Nitrogen plus phosphorus plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 20 cm. Replicate 1 | gramPerGram |
+| NP1_20cm_PA_uS | Nitrogen plus phosphorus plot soil moisture, Campbell Science CS616 period output in microseconds. The probe is at 20 cm. Replicate 1 | microsecond |
+| NP2_20cm_VW | Nitrogen plus phosphorus plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 20 cm. Replicate 2. | gramPerGram |
+| NP2_20cm_PA_uS | Nitrogen plus phosphorus plot soil moisture, Campbell Science CS616 period output in microseconds. The probe is at 20 cm. Replicate 2 | microsecond |
+| NP3_20cm_VW | Nitrogen plus phosphorus plot soil moisture, in fractional volume water content, measured using Campbell Science CS616. The calibration supplied by the manual is used. The probe is at 20 cm. Replicate 3. | gramPerGram |
+| NP3_20cm_PA_uS | Nitrogen plus phosphorus plot soil moisture, Campbell Science CS616 period output in microseconds. The probe is at 20 cm. Replicate 3 | microsecond |
+| BattV_Min | Battery minimum voltage | volts |
+
 # Wiring Diagram
 
 CR1000 [PDF](other_sites/wiring_files/MAT81_Soilmo_temp_Jun2015ver-3_CR1000.pdf){target="_blank"} AM416 multiplexer [PDF](other_sites/wiring_files/MAT81_Soilmo_temp_Jun2015ver-3_AM416.pdf){target="_blank"}
